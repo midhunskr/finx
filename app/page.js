@@ -6,7 +6,7 @@ export default function Home() {
           <div className="absolute inset-0 z-0 bg-grid-pattern pointer-events-none" />
           <div className="absolute w-60 h-60 bottom-2 rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-70" />
           <div className="absolute w-60 h-60 right-[40rem] rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-70" />
-          <div className="relative px-96 py-10 z-10 flex flex-col justify-between space-y-14">
+          <div className="relative px-80 py-10 z-10 flex flex-col justify-between space-y-14">
             {/* Nav bar */}
             <nav className="flex justify-between items-center h-[3.5rem] rounded-full">
               <div>
@@ -135,7 +135,7 @@ export default function Home() {
         </div>
 
         {/* Service section*/}
-        <div className="bg-light px-96 py-24 h-screen text-text-dark text-center ">
+        <div className="bg-light px-80 py-24 h-screen text-text-dark text-center ">
           <div className="flex flex-col items-center space-y-8">
             <div className="w-24 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
               <div className="w-2 h-2 bg-green-accent rounded-full" />
@@ -209,7 +209,7 @@ export default function Home() {
         </div>
 
         {/* Features section */}
-        <div className="bg-light px-96 py-20 h-screen text-text-dark ">
+        <div className="bg-light px-80 py-20 h-screen text-text-dark ">
           <div className="flex flex-col space-y-8">
             <div className="flex ">
               {/* Section 1 Left side */}
@@ -284,7 +284,7 @@ export default function Home() {
         </div>
 
         {/* About Us section */}
-        <div className="bg-light px-96 h-screen py-28 text-text-dark ">
+        <div className="bg-light px-80 h-screen py-28 text-text-dark ">
           <div className="flex flex-col space-y-8">
             <div className="flex space-x-8">
               {/* Section 1 Left side */}
@@ -353,7 +353,7 @@ export default function Home() {
         </div>
 
         {/* Why Us section*/}
-        <div className="bg-light px-96 py-20 justify-between h-screen text-text-dark text-center ">
+        <div className="bg-light px-80 py-20 justify-between h-screen text-text-dark text-center ">
           <div className="flex flex-col items-center  space-y-14">
             <div className="w-24 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
               <div className="w-2 h-2 bg-green-accent rounded-full" />
