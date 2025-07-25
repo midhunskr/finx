@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        light: '#F2F8F5',
+        light: '#F3F9F6',
         card: '#E5EDE9',
         'green-dark': '#0A1D12',
         'green-accent': '#1E9A5F',
@@ -20,6 +20,8 @@ module.exports = {
         'grey-shade-1': '#8B8B8B',
         'grey-shade-2': '#616161',
         'grey-shade-3': '#E4E4E4',
+        'light-blue': '#6EB0D0',
+        'light-purple': '#BC8AE8',
       },
       backgroundImage: {
         'card-glass': `linear-gradient(
@@ -35,7 +37,8 @@ module.exports = {
         md: '768px',
         lg: '1024px',
         xl: '1280px',
-        '2xl': '1440px',
+        xxl: '1440px',
+        xxxl: '1920px',
       },
     },
   },
