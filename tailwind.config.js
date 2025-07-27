@@ -30,10 +30,16 @@ module.exports = {
           rgba(242, 242, 242, 0.09) 55.71%,
           rgba(242, 242, 242, 0) 204.29%
         )`,
+        'gradient-glass': `linear-gradient(
+          180deg,
+          rgba(10, 29, 18, 0.10) -37.02%,
+          rgba(30, 154, 95, 0.10) 48.13%,
+          rgba(10, 29, 18, 0.10) 133.28%
+        )`,
       },
       screens: {
-        xs: '400px',
-        sm: '640px',
+        xs: '390MDpx',
+        sm: '430px',
         md: '768px',
         lg: '1024px',
         xl: '1280px',

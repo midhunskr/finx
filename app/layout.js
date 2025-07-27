@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={`${lexendSans.variable} antialiased overflow-y-scroll snap-y snap-mandatory scroll-smooth`}>
         <main>{children}</main>
         {/* Contact section*/}
-        <footer className="bg-green-dark px-80 py-10 justify-between text-light text-center ">
+        <footer className="bg-green-dark justify-between text-light text-center lg:px-20 lg:py-5 xl:px-48 xl:py-10 xxl:space-y-0 xxxl:px-80 xxxl:py-10">
           <div className="flex flex-col items-start justify-between space-y-4">
             <div className="">
               <img src="./logo.png" className="w-24" alt="logo" />

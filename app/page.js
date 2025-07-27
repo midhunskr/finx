@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function Home() {
   return (
     <div className="bg-light">
@@ -5,13 +7,15 @@ export default function Home() {
         <div className="absolute inset-0 z-0 bg-grid-pattern pointer-events-none" />
         <div className="absolute w-60 h-60 bottom-2 rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-70" />
         <div className="absolute w-60 h-60 right-[40rem] rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-70" />
-        <div className="relative px-60 xl:px-24 xl:py-10 xxxl:px-80 xxxl:py-10  z-10 flex flex-col justify-between space-y-14">
+        <div className="relative h-full px-5 py-5 space-y-0 md:px-12 lg:px-20 lg:py-5 xl:px-52 xl:py-10 xxl:space-y-0 xxxl:px-80 xxxl:py-10
+        z-10 flex flex-col justify-between ">
           {/* Nav bar */}
-          <nav className="flex justify-between items-center h-[3.5rem] rounded-full">
+          <nav className="flex justify-between items-center h-[3.5rem] rounded-full
+           ">
             <div>
-              <img src="./logo.png" className="w-[7rem]" alt="" />
+              <img src="./logo.png" className="w-24 md:w-[5rem] lg:w-[5rem] xl:w-[6rem] xxxl:w-[7rem]" alt="" />
             </div>
-            <ul className="flex space-x-10 text-lg">
+            <ul className="hidden lg:flex space-x-10 xxl:text-lg">
               <li><a href="#" className="text-light hover:text-green-accent">Home</a></li>
               <li><a href="#" className="text-light hover:text-green-accent">About</a></li>
               <li><a href="#" className="text-light hover:text-green-accent">Services</a></li>
@@ -21,36 +25,38 @@ export default function Home() {
           </nav>
 
           {/* Hero section */}
-          <div className="flex flex-col items-center justify-center space-y-4">
-            <div className="flex space-x-4 p-1 items-center justify-between bg-light bg-opacity-10 rounded-full border border-light border-opacity-10">
-              <div className="w-16 h-6 bg-lime flex items-center justify-center rounded-full">
-                <p className="text-text-dark">New</p>
+          <div className="flex flex-col items-start md:items-center justify-center space-y-6 lg:space-y-2 xxxl:space-y-4 ">
+            <div className="flex space-x-2 xxxl:space-x-4 p-1 items-center justify-between bg-light bg-opacity-10
+            rounded-full border border-light border-opacity-10">
+              <div className="w-14 xxl:w-16 xxl:h-6 bg-lime flex items-center justify-center rounded-full">
+                <p className="text-text-dark md:text-lg  xxxl:text-lg">New</p>
               </div>
-              <p className="pr-2">Inventory Report Upgraded.</p>
+              <p className="pr-2 md:text-lg">Inventory report upgraded.</p>
             </div>
-            <div className="flex flex-col items-center space-y-8">
-              <div className="w-full text-center space-y-3">
-                <h1 className="text-[4rem] font-medium leading-[4.5rem]">Focused success<br />with smart finance.</h1>
-                <h4 className="text-2xl ">Track performance, identify trends, and plan<br />ahead with intelligent financial reports.</h4>
+            <div className="flex flex-col md:items-center space-y-6 xl:space-y-6 xxxl:space-y-8">
+              <div className="w-full md:text-center space-y-1 xl:space-y-2 xxxl:space-y-3">
+                <h1 className="text-[2.5rem] leading-[3.2rem] sm:text-[2.8rem] md:text-[4rem] md:leading-[4.5rem] lg:text-[4rem]
+                font-medium lg:leading-[4.5rem]">Focused success<br />with smart finance.</h1>
+                <h4 className="m ai:text-xl xxxl:text-2xl">Track performance, identify trends, and plan<br />ahead with intelligent financial reports.</h4>
               </div>
-              <div className="flex space-x-4 items-center jsutify-center bg-green-accent rounded-full px-4 py-3">
-                <p className="text-2xl pb-1">Get in touch</p>
-                <img src="./arrow-right.svg" alt="arrow-right" />
+              <div className="w-40 h-10 md:w-44 md:h-14 xxxl:w-52 space-x-4 xxxl:space-x-4 flex items-center jsutify-center bg-green-accent rounded-full px-4 md:py-1 xxxl:px-4 xxxl:py-3">
+                <p className="md:text-lg xxxl:text-2xl pb-1">Get in touch</p>
+                <img src="./arrow-right.svg" className="lg:w-5" alt="arrow-right" />
               </div>
             </div>
           </div>
 
           {/* Card section */}
-          <div className="flex justify-between space-x-6">
-            <div className="flex flex-col justify-between w-full">
+          <div className="hidden xl:flex justify-center xl:justify-between xl:space-x-4 xxxl:space-x-6">
 
+            <div className=" flex flex-col justify-between w-full">
               {/* Card section 1*/}
-              <div className="w-full flex justify-end">
-                <div className="w-52 h-24 flex space-x-3 bg-card-glass p-3 rounded-xl bg-opacity-100 border border-light border-opacity-10">
+              <div className=" w-full lg:flex justify-end">
+                <div className="xxxl:w-52 h-20 flex space-x-3 bg-card-glass p-3 rounded-xl border border-light border-opacity-10">
                   <div className="flex flex-col w-full justify-center space-y-2">
-                    <p className="text-text-disabled">Total Balance</p>
+                    <p className="text-text-disabled lg:text-sm xxxl:text-lg">Total Balance</p>
                     <div className="flex items-center justify-between space-x-4">
-                      <p className="font-bold">5780.00 EUR</p>
+                      <p className="font-bold lg:text-md xxxl:text-lg">5780.00 EUR</p>
                       <div className="bg-green-accent rounded-full ">
                         <p className="text-[.8rem] px-2">+2.35%</p>
                       </div>
@@ -60,55 +66,57 @@ export default function Home() {
               </div>
 
               {/* Card section 2*/}
-              <div className="flex items-start justify-between">
-                <div className="w-72 h-28 flex items-center space-x-5 bg-card-glass px-5 py-3 rounded-2xl bg-opacity-100 border border-light border-opacity-10">
-                  <img src="./received-icon.svg" alt="received-icon" className="w-16" />
+              <div className="md:bottom-5lg:bottom-0  flex items-start justify-between">
+                <div className="lg:h-20 xxl:w-72 xxxl:h-28 flex items-center space-x-5 bg-card-glass px-5 py-3 rounded-2xl bg-opacity-100
+                border border-light border-opacity-10">
+                  <img src="./received-icon.svg" alt="received-icon" className="lg:w-10 xxxl:w-16" />
                   <div className="flex flex-col">
-                    <p className="text-text-disabled text-lg">Received</p>
-                    <p className="font-bold text-xl">5780.00 EUR</p>
+                    <p className="text-text-disabled lg:text-sm xxxl:text-lg ">Received</p>
+                    <p className="font-bold lg:text-md xxxl:text-xl">5780.00 EUR</p>
                   </div>
                 </div>
-                <img src="./dollar.svg" className="w-16" alt="dollar" />
+                <img src="./dollar.svg" className="hidden lg:block lg:w-12 xxxl:w-16" alt="dollar" />
               </div>
             </div>
 
             {/* Center card*/}
-            <div className="w-full p-4 h-72 flex flex-col bg-light text-text-dark justify-between items-center rounded-3xl ">
+            <div className=" lg:w-full w-[50%] h-72 md:p-4 lg:p-2 lg:space-y-4 xl:h-auto xxxl:p-4 xxxl:h-72 lg:flex flex-col bg-light text-text-dark justify-between items-center rounded-3xl ">
               <div className="flex flex-col justify-center items-center">
-                <p className="font-bold text-2xl">Sales & Expense</p>
-                <p className="font-semibold text-text-disabled">Monthly Sales & Expense Tracker</p>
+                <p className="font-bold lg:text-lg xxxl:text-2xl">Sales & Expense</p>
+                <p className="font-semibold text-text-disabled lg:text-md xxxl:text-lg">Monthly Sales & Expense Tracker</p>
               </div>
               <div className="flex justify-between w-full text-xl">
-                <div className="flex flex-col space-y-3">
+                <div className="flex flex-col lg:space-y-1 xxxl:space-y-3">
                   <div className="flex justify-between items-center space-x-2">
                     <img src="./sales.png" className="w-6 h-6" alt="dollar" />
-                    <p className="font-bold">Retail Sales</p>
+                    <p className="font-bold lg:text-base xxxl:text-xl">Retail Sales</p>
                     <img src="./down-arrow.svg" className="w-4" alt="down-arrow" />
                   </div>
-                  <p className="font-bold">Total Retail Sales</p>
+                  <p className="font-bold lg:text-base xxxl:text-xl">Total Retail Sales</p>
                 </div>
-                <div className="flex flex-col space-y-3">
+                <div className="flex flex-col lg:space-y-1 xxxl:space-y-3">
                   <div className="flex justify-between items-center space-x-2">
                     <img src="./calendar.png" className="w-6 h-6" alt="dollar" />
-                    <p className="font-bold">July 17</p>
+                    <p className="font-bold lg:text-base xxxl:text-xl">July 17</p>
                     <img src="./down-arrow.svg" className="w-4" alt="down-arrow" />
                   </div>
-                  <p className="font-bold">SAR 92500.00</p>
+                  <p className="font-bold lg:text-base xxxl:text-xl">SAR 92500.00</p>
                 </div>
               </div>
-              <button className="flex items-center justify-center bg-text-dark text-light rounded-full px-4 py-2 text-lg w-full">
-                Get Report
+              <button className="flex items-center justify-center bg-text-dark text-light rounded-full lg:py-1
+              xxxl:py-2 text-lg w-full lg:text-base xxxl:text-xl">
+                <p className="xxxl:pb-1">Get Report</p>
               </button>
             </div>
-            <div className="w-full flex flex-col justify-between">
 
+            <div className="w-full flex flex-col justify-between">
               {/* Card section 3*/}
-              <div className="w-full flex justify-start">
-                <div className="w-56 h-28 flex space-x-3 bg-card-glass p-3 rounded-xl bg-opacity-100 border border-light border-opacity-10">
+              <div className="w-full  lg:flex justify-start">
+                <div className="xxxl:w-56 xxxl:h-28 flex space-x-3 bg-card-glass p-3 rounded-xl bg-opacity-100 border border-light border-opacity-10">
                   <div className="flex flex-col w-full justify-center space-y-2">
-                    <p className="text-text-disabled text-lg">Net Income</p>
+                    <p className="text-text-disabled lg:text-sm xxxl:text-lg">Net Income</p>
                     <div className="flex items-center justify-between space-x-4">
-                      <p className="font-bold text-2xl">$234.67K</p>
+                      <p className="font-bold lg:text-md xxxl:text-2xl">$234.67K</p>
                       <div className="bg-green-accent rounded-full ">
                         <p className="text-[.8rem] px-2">+4.75%</p>
                       </div>
@@ -118,32 +126,48 @@ export default function Home() {
               </div>
 
               {/* Card section 4*/}
-              <div className="flex items-end justify-between">
-                <img src="./dollar.svg" className="w-16" alt="dollar" />
-                <div className="w-64 h-28 flex items-center space-x-3 bg-card-glass p-3  rounded-xl bg-opacity-100 border border-light border-opacity-10">
+              <div className=" flex items-end justify-between">
+                <img src="./ledger.svg" className="hidden lg:block lg:w-12 xxxl:w-16" alt="dollar" />
+                <div className="w-52 h-20 xxxl:w-72 xxxl:h-28 flex items-center space-x-3 bg-card-glass p-3  rounded-xl bg-opacity-100 border border-light border-opacity-10">
                   <div className="flex justify-between items-center w-full">
                     <div className="relative flex items-center">
-                      <div className="absolute w-14 h-14 bg-green-accent bg-[url('/profile1.png')] bg-cover bg-center rounded-full
+                      <div className="absolute w-10 h-10 xxxl:w-14 xxxl:h-14 bg-green-accent bg-[url('/profile1.png')] bg-cover bg-center rounded-full
                         border-[.2rem] border-light" />
-                      <div className="absolute w-14 h-14 bg-light-blue bg-[url('/profile2.png')] bg-cover bg-center rounded-full
-                        border-[.2rem] border-light left-8" />
-                      <div className="absolute w-14 h-14 bg-light-purple bg-[url('/profile3.png')] bg-cover bg-center rounded-full
-                        border-[.2rem] border-light left-16" />
+                      <div className="absolute w-10 h-10 xxxl:w-14 xxxl:h-14 bg-light-blue bg-[url('/profile2.png')] bg-cover bg-center rounded-full
+                        border-[.2rem] border-light left-6 xxxl:left-8" />
+                      <div className="absolute w-10 h-10 xxxl:w-14 xxxl:h-14 bg-light-purple bg-[url('/profile3.png')] bg-cover bg-center rounded-full
+                        border-[.2rem] border-light left-12 xxxl:left-16" />
                     </div>
                     <div>
-                      <p className="font-bold text-2xl">99.25K+</p>
-                      <p className="text-text-disabled">Trusted Users</p>
+                      <p className="font-bold xxxl:text-2xl">99.25K+</p>
+                      <p className="text-text-disabled lg:text-sm xxxl:text-xl">Trusted Users</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Card section - mobile screens */}
+          <div className="xl:hidden flex items-center justify-center">
+            <div className="relative z-20">
+              <img src="/card3_white.png" className="lg:w-[40rem] lg:hidden" alt="hero-image" />
+              <img src="/card3_white_large.png" className="lg:w-[44rem] hidden lg:block" alt="hero-image" />
+            </div>
+            <img src="./card1.png" className="absolute z-0 w-40 left-0 bottom-60 sm:bottom-64 md:bottom-[20rem] md:w-52 md:left-28
+            lg:w-72 lg:left-[7rem] lg:bottom-[28rem] opacity-40" alt="card1" />
+            <img src="./card2.png" className="absolute z-0 w-32 left-14 bottom-60 sm:left-[8rem] sm:bottom-[17rem] md:bottom-[20rem] md:w-52 md:left-[15rem]
+            lg:w-68 lg:left-[20rem] lg:bottom-[31rem]" alt="card1" />
+            <img src="./card4.png" className="absolute z-0 w-32 left-64 bottom-[14.5rem] sm:left-[18.5rem] sm:bottom-[16rem] md:bottom-[19rem] md:w-52 md:left-[30rem]
+            lg:w-72 lg:left-[40rem] lg:bottom-[29rem] opacity-40" alt="card1" />
+            <img src="./card5.png" className="absolute z-0 lg:block w-24 left-[11rem] bottom-[15.5rem] sm:w-28 sm:left-[12rem] sm:bottom-[17rem] md:bottom-[19rem] md:w-52 md:left-[22rem]
+            lg:w-72 lg:left-[30rem] lg:bottom-[28rem]" alt="card1" />
+          </div>
         </div>
       </div>
 
       {/* Service section*/}
-      <div className="bg-light px-80 py-24 h-screen text-text-dark text-center ">
+      <div className="lg:px-20 lg:py-5 xl:px-52 xl:py-10 xxl:space-y-0 xxxl:px-80 xxxl:py-10 bg-light h-screen text-text-dark text-center">
         <div className="flex flex-col items-center space-y-8">
           <div className="w-24 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
             <div className="w-2 h-2 bg-green-accent rounded-full" />
@@ -155,7 +179,7 @@ export default function Home() {
           </div>
 
           {/* Service card section*/}
-          <div className="flex justify-between space-x-2 bg-card p-2 rounded-2xl w-[68%]">
+          <div className="flex justify-between space-x-2 bg-card p-2 rounded-2xl w-[84%] xxxl:w-[68%]">
             <div className="flex flex-col items-center bg-light rounded-xl p-4 w-full">
               <img src="./book-keeping.svg" className="py-2" alt="book-keeping" />
               <div>
@@ -209,7 +233,7 @@ export default function Home() {
       </div>
 
       {/* Features section */}
-      <div className="bg-light px-80 py-20 h-screen text-text-dark ">
+      <div className="bg-light h-screen text-text-dark lg:px-20 lg:py-10 xl:px-52 xl:py-10 xxl:space-y-0 xxxl:px-80 xxxl:py-10">
         <div className="flex flex-col space-y-14">
           <div className="flex ">
             {/* Section 1 Left side */}
@@ -294,7 +318,7 @@ export default function Home() {
       </div>
 
       {/* About Us section */}
-      <div className="bg-light px-80 h-screen py-28 text-text-dark ">
+      <div className="bg-light h-screen text-text-dark lg:px-20 lg:py-5 xl:px-52 xl:py-10 xxl:space-y-0 xxxl:px-80 xxxl:py-10">
         <div className="flex flex-col space-y-14">
           <div className="flex justify-between space-y-3">
             {/* Section 1 Left side */}
@@ -365,7 +389,7 @@ export default function Home() {
       </div>
 
       {/* Why Us section*/}
-      <div className="bg-light px-80 py-20 justify-between h-screen text-text-dark text-center ">
+      <div className="bg-light justify-between h-screen text-text-dark text-center lg:px-20 lg:py-5 xl:px-52 xl:py-10 xxl:space-y-0 xxxl:px-80 xxxl:py-10">
         <div className="flex flex-col items-center  space-y-14">
           <div className="w-24 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
             <div className="w-2 h-2 bg-green-accent rounded-full" />
