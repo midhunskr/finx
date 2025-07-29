@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 export default function Home() {
-  const sectionIds = ['home', 'service', 'features', 'about', 'highlight', 'contact'];
+  const sectionIds = ['service', 'features', 'about', 'highlight', 'contact'];
   const [activeLink, setActiveLink] = useState('service');
   useEffect(() => {
     // === Sticky Nav Visibility Observer ===
@@ -59,7 +59,7 @@ export default function Home() {
         <div className="absolute w-60 h-60 bottom-2 rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
         <div className="absolute w-60 h-60 right-[5rem] top-[9rem] md:right-[10rem] lg:right-[20rem] xxl:right-[30rem]
         xxxl:right-[40rem] rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
-        <div id="home" className="relative h-screen p-5 space-y-0 md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
+        <div className="relative h-screen p-5 space-y-0 md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
         z-10 flex flex-col justify-between ">
           {/* Nav bar */}
           <nav className="flex justify-between items-center h-[3.5rem] rounded-full">
@@ -215,8 +215,8 @@ export default function Home() {
         id="sticky-nav-top"
         className="hidden md:block fixed top-0 w-full z-50 bg-light shadow-md transition-all translate-y-[-100%]"
       >
-        <nav className="flex justify-between items-center h-16 px-4 md:px-12 lg:px-20">
-          <ul className="flex items-center justify-center space-x-10 xxl:text-lg w-full font-medium">
+        <nav className="h-16 ">
+          <ul className="flex items-center justify-between xxl:text-lg w-full font-medium py-5 md:px-12 lg:px-20 xl:px-40 xxl:px-64 xxxl:px-80">
             {sectionIds.map((id) => (
               <li key={id}>
                 <a
@@ -234,9 +234,9 @@ export default function Home() {
 
 
       {/* Sticky Nav - Bottom (sm and xs only) */}
-      <div id="sticky-nav-bottom" className="md:hidden fixed bottom-0 w-full z-50 bg-light shadow-t-md transition-all translate-y-full">
-        <nav className="flex justify-between items-center h-14 px-4">
-          <ul className="flex space-x-2 sm:space-x-4 xxl:text-lg font-medium">
+      <div id="sticky-nav-bottom" className="md:hidden fixed bottom-5 w-full z-50 bg-light shadow-md transition-all translate-y-full">
+        <nav className="flex h-16 px-4">
+          <ul className="flex space-x-2 sm:space-x-4 xxl:text-lg font-medium justify-between items-center w-full">
             {sectionIds.map((id) => (
               <li key={id}>
                 <a
