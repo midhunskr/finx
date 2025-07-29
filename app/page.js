@@ -40,7 +40,7 @@ export default function Home() {
                 <h4 className="md:text-xl xxxl:text-2xl">Track performance, identify trends, and plan<br />ahead with intelligent financial reports.</h4>
               </div>
               <div className="w-40 h-10 md:w-44 md:h-14 xxxl:w-52 space-x-4 xxxl:space-x-4 flex items-center jsutify-center bg-green-accent rounded-full px-4 md:py-1 xxxl:px-4 xxxl:py-3">
-                <p className="md:text-lg xxxl:text-2xl pb-1">Get in touch</p>
+                <p className="md:text-lg xxxl:text-2xl">Get in touch</p>
                 <img src="./arrow-right.svg" className="lg:w-5" alt="arrow-right" />
               </div>
             </div>
@@ -465,7 +465,7 @@ export default function Home() {
                   <img src="./test-passed.png" alt="update" className="w-10 " />
                 </div>
                 <div className="relative flex items-center text-left">
-                  <div className="w-16 h-32 absolute -left-[1rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <div className="w-16 h-32 absolute -left-[1.2rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
                   <h4 className="z-10 text-grey-shade-2 text-base font-medium">Staying Up-to-Date <br /> with Standards & <br /> Regulations</h4>
                 </div>
               </div>
@@ -509,7 +509,7 @@ export default function Home() {
                       <img src="./accuracy.svg" alt="update" className="w-10 " />
                     </div>
                     <div className="flex items-center text-left">
-                      <div className="w-16 h-32 absolute left-[3.6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                      <div className="w-16 h-32 absolute left-[3.8rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
                       <h4 className="z-10 text-grey-shade-2 text-base font-medium">Ensuring <br /> Accuracy</h4>
                     </div>
                   </div>
