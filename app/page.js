@@ -6,8 +6,9 @@ export default function Home() {
       <div className="relative bg-green-dark text-light h-screen overflow-hidden">
         <div className="absolute inset-0 z-0 bg-grid-pattern pointer-events-none" />
         <div className="absolute w-60 h-60 bottom-2 rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
-        <div className="absolute w-60 h-60 right-[5rem] top-[9rem] md:right-[10rem] lg:right-[20rem] xxl:right-[30rem] xxxl:right-[40rem] rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
-        <div className="relative h-full p-5 space-y-0 md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
+        <div className="absolute w-60 h-60 right-[5rem] top-[9rem] md:right-[10rem] lg:right-[20rem] xxl:right-[30rem]
+        xxxl:right-[40rem] rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
+        <div className="relative h-screen p-5 space-y-0 md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
         z-10 flex flex-col justify-between ">
           {/* Nav bar */}
           <nav className="flex justify-between items-center h-[3.5rem] rounded-full
@@ -151,8 +152,7 @@ export default function Home() {
           {/* Card section - mobile screens */}
           <div className="xl:hidden flex items-center justify-center">
             <div className="relative z-20">
-              <img src="/card3_white_large.png" className="lg:w-[40rem] lg:hidden" alt="hero-image" />
-              <img src="/card3_white_large.png" className="lg:w-[44rem] hidden lg:block" alt="hero-image" />
+              <img src="/card3_white_large.png" className="w-[22rem] sm:w-[24rem] md:w-[30rem] lg:w-[44rem]" alt="hero-image" />
             </div>
             <img src="./card1.png" className="absolute z-0 w-40 left-0 bottom-60 sm:bottom-64 md:bottom-[20rem] md:w-52 md:left-28
             lg:w-72 lg:left-[7rem] lg:bottom-[28rem] opacity-40" alt="card1" />
