@@ -1,6 +1,57 @@
-import Image from "next/image"
+'use client'
+
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function Home() {
+  const sectionIds = ['home', 'service', 'features', 'about', 'highlight', 'contact'];
+  const [activeLink, setActiveLink] = useState('service');
+  useEffect(() => {
+    // === Sticky Nav Visibility Observer ===
+    const trigger = document.querySelector('#nav-trigger');
+    const topNav = document.querySelector('#sticky-nav-top');
+    const bottomNav = document.querySelector('#sticky-nav-bottom');
+
+    const visibilityObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          topNav?.classList.remove('translate-y-[-100%]');
+          bottomNav?.classList.remove('translate-y-full');
+        } else {
+          topNav?.classList.add('translate-y-[-100%]');
+          bottomNav?.classList.add('translate-y-full');
+        }
+      },
+      { threshold: 0 }
+    );
+
+    if (trigger) visibilityObserver.observe(trigger);
+
+    // === Section Tracking Observer for Active Link ===
+    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+    const activeLinkObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveLink(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: '-40% 0px -55% 0px',
+        threshold: 0,
+      }
+    );
+
+    sections.forEach(section => activeLinkObserver.observe(section));
+
+    return () => {
+      visibilityObserver.disconnect();
+      activeLinkObserver.disconnect();
+    };
+  }, []);
+
   return (
     <div className="bg-light">
       <div className="relative bg-green-dark text-light h-screen overflow-hidden">
@@ -8,20 +59,13 @@ export default function Home() {
         <div className="absolute w-60 h-60 bottom-2 rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
         <div className="absolute w-60 h-60 right-[5rem] top-[9rem] md:right-[10rem] lg:right-[20rem] xxl:right-[30rem]
         xxxl:right-[40rem] rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
-        <div className="relative h-screen p-5 space-y-0 md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
+        <div id="home" className="relative h-screen p-5 space-y-0 md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
         z-10 flex flex-col justify-between ">
           {/* Nav bar */}
-          <nav className="flex justify-between items-center h-[3.5rem] rounded-full
-           ">
+          <nav className="flex justify-between items-center h-[3.5rem] rounded-full">
             <div>
               <img src="./logo.png" className="w-24 md:w-[5rem] lg:w-[5rem] xl:w-[6rem] xxxl:w-[7rem]" alt="" />
             </div>
-            <ul className="hidden lg:flex space-x-10 xxl:text-lg">
-              <li><a href="#" className="text-light hover:text-green-accent">Home</a></li>
-              <li><a href="#" className="text-light hover:text-green-accent">About</a></li>
-              <li><a href="#" className="text-light hover:text-green-accent">Services</a></li>
-              <li><a href="#" className="text-light hover:text-green-accent">Contact</a></li>
-            </ul>
             <div />
           </nav>
 
@@ -29,10 +73,10 @@ export default function Home() {
           <div className="flex flex-col items-start md:items-center justify-center space-y-6 lg:space-y-2 xxxl:space-y-4 ">
             <div className="flex space-x-2 xxxl:space-x-4 p-1 items-center justify-between bg-light bg-opacity-10
             rounded-full border border-light border-opacity-10">
-              <div className="w-14 xxl:w-16 xxl:h-6 bg-lime flex items-center justify-center rounded-full">
-                <p className="text-text-dark md:text-lg  xxxl:text-lg">New</p>
+              <div className="w-12 xxl:w-16 xxl:h-6 bg-lime flex items-center justify-center rounded-full">
+                <p className="text-text-dark text-sm md:text-lg xxxl:text-lg">New</p>
               </div>
-              <p className="pr-2 md:text-lg">Inventory report upgraded.</p>
+              <p className="pr-2 text-sm md:text-lg">Inventory report upgraded.</p>
             </div>
             <div className="flex flex-col md:items-center space-y-6 xl:space-y-6 xxxl:space-y-8">
               <div className="w-full md:text-center space-y-1 xl:space-y-2 xxxl:space-y-3">
@@ -166,8 +210,52 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Sticky Nav - Top (md and up) */}
+      <div
+        id="sticky-nav-top"
+        className="hidden md:block fixed top-0 w-full z-50 bg-light shadow-md transition-all translate-y-[-100%]"
+      >
+        <nav className="flex justify-between items-center h-16 px-4 md:px-12 lg:px-20">
+          <ul className="flex items-center justify-center space-x-10 xxl:text-lg w-full font-medium">
+            {sectionIds.map((id) => (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  className={`transition-colors duration-200 ${activeLink === id ? 'text-green-accent' : 'text-text-disabled'
+                    }`}
+                >
+                  {id.charAt(0).toUpperCase() + id.slice(1)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+
+
+      {/* Sticky Nav - Bottom (sm and xs only) */}
+      <div id="sticky-nav-bottom" className="md:hidden fixed bottom-0 w-full z-50 bg-light shadow-t-md transition-all translate-y-full">
+        <nav className="flex justify-between items-center h-14 px-4">
+          <ul className="flex space-x-2 sm:space-x-4 xxl:text-lg font-medium">
+            {sectionIds.map((id) => (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  className={`transition-colors duration-200 ${activeLink === id ? 'text-green-accent' : 'text-text-disabled'
+                    }`}
+                >
+                  {id.charAt(0).toUpperCase() + id.slice(1)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+
+      <div id="nav-trigger" className="h-1" />
+
       {/* Service section*/}
-      <div className="px-5 py-10 h-full border border-b border-grey-shade-3 xl:border-0 lg:px-20 md:text-center md:px-12 md:py-14 xl:px-40 xl:py-10 xxl:px-64 xxl:py-5
+      <div id="service" className="px-5 py-10 h-full border border-b border-grey-shade-3 xl:border-0 lg:px-20 md:text-center md:px-12 md:py-14 xl:px-40 xl:py-10 xxl:px-64 xxl:py-5
       xxxl:px-80 xxxl:py-10 bg-light text-text-dark">
         <div className="flex flex-col md:items-center h-full justify-between space-y-6 xl:space-y-8">
           <div className="w-24 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
@@ -235,7 +323,7 @@ export default function Home() {
       </div>
 
       {/* Features section */}
-      <div className="px-5 py-10 border border-b border-grey-shade-3 xl:border-0 bg-light h-full text-text-dark md:px-12 md:py-14 lg:px-20 xl:px-[.5rem] xl:py-0 xl:scale-75
+      <div id="features" className="px-5 py-10 border border-b border-grey-shade-3 xl:border-0 bg-light h-full text-text-dark md:px-12 md:py-14 lg:px-20 xl:px-[.5rem] xl:py-0 xl:scale-75
       xxl:space-y-0 xxl:px-[5.5rem] xxl:scale-75 xxxl:scale-100 xxxl:px-80 xxxl:py-10">
         <div className="flex flex-col space-y-20">
           <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0">
@@ -314,7 +402,7 @@ export default function Home() {
       </div>
 
       {/* About Us section */}
-      <div className="px-5 py-10 bg-light h-full text-text-dark border border-b border-grey-shade-3 xl:border-0 md:px-12 md:py-14 lg:px-20 lg:py-10 xl:px-44 xl:py-0
+      <div id="about" className="px-5 py-10 bg-light h-full text-text-dark border border-b border-grey-shade-3 xl:border-0 md:px-12 md:py-14 lg:px-20 lg:py-10 xl:px-44 xl:py-0
       xxl:space-y-0 xxl:px-[12rem] xxl:scale-90 xxxl:scale-100 xxxl:px-80 xxxl:py-10 ">
         <div className="flex flex-col space-y-14">
           <div className="flex flex-col lg:flex-row justify-between">
@@ -381,8 +469,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Why Us section*/}
-      <div className="px-5 py-10 bg-light h-full text-text-dark border border-b border-grey-shade-3 xl:border-0 md:px-12 md:py-14 lg:px-20 lg:py-10 xl:px-52 xl:py-14
+      {/* Highlight section*/}
+      <div id="highlight" className="px-5 py-10 bg-light h-full text-text-dark border border-b border-grey-shade-3 xl:border-0 md:px-12 md:py-14 lg:px-20 lg:py-10 xl:px-52 xl:py-14
       xxl:py-0 xxl:space-y-0 xxl:px-[5.5rem] xxl:scale-75 xxxl:scale-100 xxxl:px-80 xxxl:py-20">
         <div className="flex flex-col md:items-center space-y-8 lg:space-y-14 md:text-center">
           <div className="w-24 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
@@ -401,7 +489,7 @@ export default function Home() {
             <h4 className="text-xl lg:text-2xl text-text-disabled">Accurate, secure, and scalable financial reporting tools designed to <br className="hidden lg:block" /> streamline your operations and support confident decision-making.</h4>
           </div>
 
-          {/* Why Us Card section*/}
+          {/* Highlight Card section*/}
           <div className="flex flex-col md:space-y-16 md:scale-75 lg:scale-100 w-full">
             <div className="hidden md:flex justify-between xxxl:px-[1.5rem]">
               {/* Card 1 */}
@@ -457,7 +545,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* Why Us Card - mobile section*/}
+            {/* Highlight Card - mobile section*/}
             <div className="md:hidden w-full space-y-8">
               {/* Card 1 */}
               <div className=" flex ">
@@ -515,6 +603,43 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact section */}
+      <div id="contact" className="px-5 py-10 bg-green-dark justify-between text-light text-center md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10">
+        <div className="">
+          <img src="./logo.png" className="w-24" alt="logo" />
+        </div>
+        <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row justify-between w-full">
+          <div className="flex flex-col text-left space-y-2">
+            <h5 className="font-medium text-xl">Contact Us</h5>
+            <div>
+              <div className="flex space-x-4">
+                <h6 className="text-text-disabled">Phone:</h6>
+                <p>+91 949 743 6877</p>
+              </div>
+              <div className="flex space-x-4">
+                <h6 className="text-text-disabled">Hours:</h6>
+                <p>9:00 AM - 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col text-left space-y-2">
+            <h5 className="font-medium text-xl">Locate Us</h5>
+            <div className="flex flex-col">
+              <h6>Al Malaz,</h6>
+              <h6>Riyadh,</h6>
+              <h6>Saudi Arabia.</h6>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <div className="flex space-x-4 items-center justify-center">
+              <img src="./bxl-facebook.svg" className="w-6" alt="facebook" />
+              <img src="./instagram-logo.svg" className="w-10" alt="instagram" />
+              <img src="./linkedin.svg" className="w-12" alt="linkedin" />
             </div>
           </div>
         </div>

@@ -29,6 +29,11 @@ body {
 } */
 
 @layer utilities {
+
+  /* html {
+    scroll-behavior: smooth;
+  } */
+
   .bg-grid-pattern {
     background-image:
       /* Vertical lines */

@@ -16,42 +16,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${lexendSans.variable} antialiased overflow-y-scroll snap-y snap-mandatory scroll-smooth`}>
         <main>{children}</main>
-        {/* Contact section*/}
         <footer className="px-5 py-10 bg-green-dark justify-between text-light text-center md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10">
-          <div className="flex flex-col items-start justify-between space-y-4">
-            <div className="">
-              <img src="./logo.png" className="w-24" alt="logo" />
-            </div>
-            <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row justify-between w-full">
-              <div className="flex flex-col text-left space-y-2">
-                <h5 className="font-medium text-xl">Contact Us</h5>
-                <div>
-                  <div className="flex space-x-4">
-                    <h6 className="text-text-disabled">Phone:</h6>
-                    <p>+91 949 743 6877</p>
-                  </div>
-                  <div className="flex space-x-4">
-                    <h6 className="text-text-disabled">Hours:</h6>
-                    <p>9:00 AM - 5:00 PM</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col text-left space-y-2">
-                <h5 className="font-medium text-xl">Locate Us</h5>
-                <div className="flex flex-col">
-                  <h6>Al Malaz,</h6>
-                  <h6>Riyadh,</h6>
-                  <h6>Saudi Arabia.</h6>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="flex space-x-4 items-center justify-center">
-                  <img src="./bxl-facebook.svg" className="w-6" alt="facebook" />
-                  <img src="./instagram-logo.svg" className="w-10" alt="instagram" />
-                  <img src="./linkedin.svg" className="w-12" alt="linkedin" />
-                </div>
-              </div>
-            </div>
+          <div className="flex flex-col items-start justify-between space-y-4">          
             <div className="flex items-center justify-center w-full pt-14">
               <p className="text-sm text-text-disabled">© 2025 Finx | All Rights Reserved</p>
             </div>
