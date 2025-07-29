@@ -5,9 +5,9 @@ export default function Home() {
     <div className="bg-light">
       <div className="relative bg-green-dark text-light h-screen overflow-hidden">
         <div className="absolute inset-0 z-0 bg-grid-pattern pointer-events-none" />
-        <div className="absolute w-60 h-60 bottom-2 rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-70" />
-        <div className="absolute w-60 h-60 right-[40rem] rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-70" />
-        <div className="relative h-full px-5 py-5 space-y-0 md:px-12 lg:px-20 lg:py-5 xl:px-52 xl:py-10 xxl:space-y-0 xxxl:px-80 xxxl:py-10
+        <div className="absolute w-60 h-60 bottom-2 rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
+        <div className="absolute w-60 h-60 right-[5rem] top-[9rem] md:right-[10rem] lg:right-[20rem] xxl:right-[30rem] xxxl:right-[40rem] rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
+        <div className="relative h-full p-5 space-y-0 md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
         z-10 flex flex-col justify-between ">
           {/* Nav bar */}
           <nav className="flex justify-between items-center h-[3.5rem] rounded-full
@@ -37,7 +37,7 @@ export default function Home() {
               <div className="w-full md:text-center space-y-1 xl:space-y-2 xxxl:space-y-3">
                 <h1 className="text-[2.5rem] leading-[3.2rem] sm:text-[2.8rem] md:text-[4rem] md:leading-[4.5rem] lg:text-[4rem]
                 font-medium lg:leading-[4.5rem]">Focused success<br />with smart finance.</h1>
-                <h4 className="m ai:text-xl xxxl:text-2xl">Track performance, identify trends, and plan<br />ahead with intelligent financial reports.</h4>
+                <h4 className="md:text-xl xxxl:text-2xl">Track performance, identify trends, and plan<br />ahead with intelligent financial reports.</h4>
               </div>
               <div className="w-40 h-10 md:w-44 md:h-14 xxxl:w-52 space-x-4 xxxl:space-x-4 flex items-center jsutify-center bg-green-accent rounded-full px-4 md:py-1 xxxl:px-4 xxxl:py-3">
                 <p className="md:text-lg xxxl:text-2xl pb-1">Get in touch</p>
@@ -66,7 +66,7 @@ export default function Home() {
               </div>
 
               {/* Card section 2*/}
-              <div className="md:bottom-5lg:bottom-0  flex items-start justify-between">
+              <div className="md:bottom-5lg:bottom-0 space-x-4 flex items-start justify-between">
                 <div className="lg:h-20 xxl:w-72 xxxl:h-28 flex items-center space-x-5 bg-card-glass px-5 py-3 rounded-2xl bg-opacity-100
                 border border-light border-opacity-10">
                   <img src="./received-icon.svg" alt="received-icon" className="lg:w-10 xxxl:w-16" />
@@ -126,17 +126,17 @@ export default function Home() {
               </div>
 
               {/* Card section 4*/}
-              <div className=" flex items-end justify-between">
+              <div className=" flex items-end space-x-4 justify-between">
                 <img src="./ledger.svg" className="hidden lg:block lg:w-12 xxxl:w-16" alt="dollar" />
-                <div className="w-52 h-20 xxxl:w-72 xxxl:h-28 flex items-center space-x-3 bg-card-glass p-3  rounded-xl bg-opacity-100 border border-light border-opacity-10">
+                <div className="w-full h-20 xxxl:w-72 xxxl:h-28 flex items-center space-x-3 bg-card-glass p-3 rounded-xl bg-opacity-100 border border-light border-opacity-10">
                   <div className="flex justify-between items-center w-full">
                     <div className="relative flex items-center">
-                      <div className="absolute w-10 h-10 xxxl:w-14 xxxl:h-14 bg-green-accent bg-[url('/profile1.png')] bg-cover bg-center rounded-full
+                      <div className="absolute xxl:w-10 xxl:h-10 xxxl:w-14 xxxl:h-14 bg-green-accent bg-[url('/profile1.png')] bg-cover bg-center rounded-full
                         border-[.2rem] border-light" />
-                      <div className="absolute w-10 h-10 xxxl:w-14 xxxl:h-14 bg-light-blue bg-[url('/profile2.png')] bg-cover bg-center rounded-full
-                        border-[.2rem] border-light left-6 xxxl:left-8" />
-                      <div className="absolute w-10 h-10 xxxl:w-14 xxxl:h-14 bg-light-purple bg-[url('/profile3.png')] bg-cover bg-center rounded-full
-                        border-[.2rem] border-light left-12 xxxl:left-16" />
+                      <div className="absolute xxl:w-10 xxl:h-10 xxxl:w-14 xxxl:h-14 bg-light-blue bg-[url('/profile2.png')] bg-cover bg-center rounded-full
+                        border-[.2rem] border-light left-6 xxl:left-10  xxxl:left-8" />
+                      <div className="absolute xxl:w-10 xxl:h-10 xxxl:w-14 xxxl:h-14 bg-light-purple bg-[url('/profile3.png')] bg-cover bg-center rounded-full
+                        border-[.2rem] border-light left-12 xxl:left-20 xxxl:left-16" />
                     </div>
                     <div>
                       <p className="font-bold xxxl:text-2xl">99.25K+</p>
@@ -158,7 +158,7 @@ export default function Home() {
             lg:w-72 lg:left-[7rem] lg:bottom-[28rem] opacity-40" alt="card1" />
             <img src="./card2.png" className="absolute z-0 w-32 left-14 bottom-60 sm:left-[8rem] sm:bottom-[17rem] md:bottom-[20rem] md:w-52 md:left-[15rem]
             lg:w-68 lg:left-[20rem] lg:bottom-[31rem]" alt="card1" />
-            <img src="./card4.png" className="absolute z-0 w-32 left-64 bottom-[14.5rem] sm:left-[18.5rem] sm:bottom-[16rem] md:bottom-[19rem] md:w-52 md:left-[30rem]
+            <img src="./card4.png" className="absolute z-0 w-32 left-64 bottom-[14.5rem] sm:left-[18.5rem] sm:bottom-[16rem] md:bottom-[19rem] md:w-52 md:left-[28rem]
             lg:w-72 lg:left-[40rem] lg:bottom-[29rem] opacity-40" alt="card1" />
             <img src="./card5.png" className="absolute z-0 lg:block w-24 left-[11rem] bottom-[15.5rem] sm:w-28 sm:left-[12rem] sm:bottom-[17rem] md:bottom-[19rem] md:w-52 md:left-[22rem]
             lg:w-72 lg:left-[30rem] lg:bottom-[28rem]" alt="card1" />
@@ -167,64 +167,66 @@ export default function Home() {
       </div>
 
       {/* Service section*/}
-      <div className="lg:px-20 lg:py-5 xl:px-52 xl:py-10 xxl:space-y-0 xxxl:px-80 xxxl:py-10 bg-light h-screen text-text-dark text-center">
-        <div className="flex flex-col items-center space-y-8">
+      <div className="px-5 py-10 h-full border border-b border-grey-shade-3 xl:border-0 lg:px-20 md:text-center md:px-12 md:py-14 xl:px-40 xl:py-10 xxl:px-64 xxl:py-5
+      xxxl:px-80 xxxl:py-10 bg-light text-text-dark">
+        <div className="flex flex-col md:items-center h-full justify-between space-y-6 xl:space-y-8">
           <div className="w-24 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
             <div className="w-2 h-2 bg-green-accent rounded-full" />
             <p className="font-medium text-green-accent">Services</p>
           </div>
           <div className="flex flex-col space-y-4">
-            <h1 className="text-[4rem] font-medium leading-[4.5rem] w-">Smarter Services. <br /> For the Future You.</h1>
-            <h4 className="text-2xl text-text-disabled">Smart financial solutions to simplify your journey and <br /> power your growth — today and beyond.</h4>
+            <h1 className="text-[2.5rem] leading-[3.2rem] md:text-[3.5rem] md:leading-[3.8rem] lg:text-[4rem] lg:leading-[4.5rem] xl:text-[3rem] xl:leading-[3.5rem] xxl:text-[3rem] xxl:leading-[3.4rem]
+            xxxl:text-[4.4rem] font-medium xxxl:leading-[4.5rem]">Smarter Services. <br /> For the Future You.</h1>
+            <h4 className="text-lg md:text-2xl text-text-disabled">Smart financial solutions to simplify your journey and <br className="hidden md:block" /> power your growth — today and beyond.</h4>
           </div>
 
           {/* Service card section*/}
-          <div className="flex justify-between space-x-2 bg-card p-2 rounded-2xl w-[84%] xxxl:w-[68%]">
-            <div className="flex flex-col items-center bg-light rounded-xl p-4 w-full">
-              <img src="./book-keeping.svg" className="py-2" alt="book-keeping" />
-              <div>
-                <h3 className="font-bold">Book-Keeping</h3>
-              </div>
-              <ul className="flex flex-col space-y-2 text-left py-2">
+          <div className=" flex flex-col space-y-2 lg:space-y-0 lg:flex-row justify-between lg:space-x-2 bg-card p-2 rounded-3xl w-full">
+            <div className="flex flex-col md:flex-row justify-between px-6 space-x-2 lg:space-x-0 lg:flex-col items-center bg-light rounded-2xl xxl:p-2 xxxl:p-4 w-full py-8">
+              <img src="./book-keeping.svg" className="md:order-2 lg:order-1 xl:w-[8rem] xxl:w-[12rem] xxxl:w-[16rem] py-2" alt="book-keeping" />
+              <ul className="flex flex-col h-full space-y-2 text-left py-2 lg:order-2">
+                <div className="flex justify-center">
+                  <h3 className="font-bold md:text-lg xxxl:text-2xl">Book-Keeping</h3>
+                </div>
                 <div className="flex space-x-2 items-center ">
-                  <img src="./check.svg" className="w-5 pb-3" alt="check" />
-                  <li>Recording transactions <br /> (income, expenses, assets, liabilities, equity)</li>
+                  <img src="./check.svg" className="w-5 pb-5" alt="check" />
+                  <li className="xxxl:text-xl" >Recording transactions <br /> (income, expenses, assets, liabilities, equity)</li>
                 </div>
                 <div className="flex space-x-2 items-center ">
                   <img src="./check.svg" className="w-5" alt="check" />
-                  <li>Maintaining accurate records</li>
+                  <li className="xxxl:text-xl" >Maintaining accurate records</li>
                 </div>
                 <div className="flex space-x-2 items-center ">
                   <img src="./check.svg" className="w-5" alt="check" />
-                  <li>Reconciling accounts</li>
+                  <li className="xxxl:text-xl" >Reconciling accounts</li>
                 </div>
                 <div className="flex space-x-2 items-center ">
                   <img src="./check.svg" className="w-5" alt="check" />
-                  <li>Preparing financial statements</li>
+                  <li className="xxxl:text-xl" >Preparing financial statements</li>
                 </div>
               </ul>
             </div>
-            <div className="flex flex-col items-center bg-light rounded-xl p-4 w-full">
-              <img src="./accounting.svg" className="py-2" alt="book-keeping" />
-              <div>
-                <h3 className="font-bold">Accounting</h3>
-              </div>
-              <ul className="flex flex-col space-y-2 text-left py-2">
+            <div className="flex flex-col md:flex-row justify-between px-6 space-x-2 lg:space-x-0 lg:flex-col items-center bg-light rounded-2xl xxl:p-2 xxxl:p-4 w-full py-8">
+              <img src="./accounting.svg" className="xl:w-[10.5rem] xxl:w-[15.5rem] xxxl:w-[20.5rem] py-2" alt="book-keeping" />
+              <ul className="flex flex-col  h-full space-y-2 text-left py-2">
+                <div className="flex justify-center">
+                  <h3 className="font-bold md:text-lg xxxl:text-2xl">Accounting</h3>
+                </div>
                 <div className="flex space-x-2 items-center">
                   <img src="./check.svg" className="w-5" alt="check" />
-                  <li>Analyzing transactions</li>
+                  <li className="xxxl:text-xl" >Analyzing transactions</li>
                 </div>
                 <div className="flex space-x-2 items-center ">
                   <img src="./check.svg" className="w-5" alt="check" />
-                  <li>Preparing reports</li>
+                  <li className="xxxl:text-xl" >Preparing reports</li>
+                </div>
+                <div className="flex space-x-2 items-center ">
+                  <img src="./check.svg" className="w-5 pb-5" alt="check" />
+                  <li className="xxxl:text-xl" >Ensuring compliance with <br /> standards and regulations</li>
                 </div>
                 <div className="flex space-x-2 items-center ">
                   <img src="./check.svg" className="w-5" alt="check" />
-                  <li>Ensuring compliance with <br /> standards and regulations</li>
-                </div>
-                <div className="flex space-x-2 items-center ">
-                  <img src="./check.svg" className="w-5" alt="check" />
-                  <li>Providing insights and recommendations</li>
+                  <li className="xxxl:text-xl" >Providing insights and recommendations</li>
                 </div>
               </ul>
             </div>
@@ -233,9 +235,10 @@ export default function Home() {
       </div>
 
       {/* Features section */}
-      <div className="bg-light h-screen text-text-dark lg:px-20 lg:py-10 xl:px-52 xl:py-10 xxl:space-y-0 xxxl:px-80 xxxl:py-10">
-        <div className="flex flex-col space-y-14">
-          <div className="flex ">
+      <div className="px-5 py-10 border border-b border-grey-shade-3 xl:border-0 bg-light h-full text-text-dark md:px-12 md:py-14 lg:px-20 xl:px-[.5rem] xl:py-0 xl:scale-75
+      xxl:space-y-0 xxl:px-[5.5rem] xxl:scale-75 xxxl:scale-100 xxxl:px-80 xxxl:py-10">
+        <div className="flex flex-col space-y-20">
+          <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0">
             {/* Section 1 Left side */}
             <div className="flex flex-col w-full space-y-6">
               <div className="w-36 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
@@ -243,58 +246,51 @@ export default function Home() {
                 <p className="font-medium text-green-accent">Single Platform</p>
               </div>
               <div className="flex flex-col space-y-4">
-                <h2 className="text-[3rem] font-medium leading-[3.5rem]">One platform for <br /> all your reports.</h2>
-                <h5 className="text-xl text-text-disabled">Manage daily transactions, inventory, and <br /> finances — all in one dashboard.</h5>
+                <h2 className="text-[2.5rem] leading-[3.2rem] md:text-[3rem] font-medium md:leading-[3.5rem]">One platform for <br className="hidden lg:block" /> all your reports.</h2>
+                <h5 className="text-lg md:text-xl text-text-disabled">Manage daily transactions, inventory, and <br /> finances — all in one dashboard.</h5>
               </div>
               <div>
-                <ul className="flex flex-col space-y-2 font-medium">
+                <ul className="flex flex-col space-y-2 font-medium text-lg">
                   <div className="flex space-x-2 items-center ">
                     <img src="./check.svg" className="w-5" alt="check" />
-                    <li>Recording transactions (income, expenses, assets, liabilities, equity)</li>
+                    <li>Real-time sales and expense tracking</li>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <img src="./check.svg" className="w-5" alt="check" />
-                    <li>Maintaining accurate records</li>
+                    <li>Automated inventory insights</li>
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <img src="./check.svg" className="w-5" alt="check" />
-                    <li>Reconciling accounts</li>
-                  </div>
-                  <div className="flex space-x-2 items-center ">
-                    <img src="./check.svg" className="w-5" alt="check" />
-                    <li>Preparing financial statements</li>
+                    <li>Ready-to-use inancial statements</li>
                   </div>
                 </ul>
               </div>
             </div>
 
             {/* Section 1 Right side */}
-            <div className="relative w-full bg-card flex justify-center items-end rounded-2xl">
-              <img src="./features-1.svg" className="w-90 absolute  -bottom-5" alt="features-1" />
-            </div>
-            <div>
+            <div className="w-full h-full lg:h-auto bg-card flex justify-center items-end rounded-2xl">
+              <img src="./features-1.svg" className="w-80 pt-10 lg:w-90" alt="features-1" />
             </div>
           </div>
-          <div className="flex space-x-4">
+
+          <div className="flex flex-col lg:flex-row lg:space-x-4 lg:space-y-0">
             {/* Section 2 Left side */}
-            <div className="relative w-full bg-card flex justify-center items-center rounded-2xl">
-              <img src="./features-2.svg" className="w-80 pt-4" alt="features-1" />
-            </div>
-            <div>
+            <div className="w-full bg-card flex justify-center items-center rounded-2xl order-2 lg:order-1">
+              <img src="./features-2.svg" className="w-80 pt-5" alt="features-1" />
             </div>
             {/* Section 2 Right side */}
-            <div className="flex flex-col w-full space-y-6 ">
+            <div className="flex flex-col w-full space-y-6 order-1 pb-8 lg:pb-0">
               <div className="w-44 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
                 <div className="w-2 h-2 bg-green-accent rounded-full" />
                 <p className="font-medium text-green-accent">Effortless Delivery</p>
               </div>
               <div className="flex flex-col space-y-4">
-                <h2 className="text-[3rem] font-medium leading-[3.5rem]">Financial Clarity Without the Hassle.</h2>
+                <h2 className="text-[2.5rem] leading-[3.2rem] md:text-[3rem] font-medium md:leading-[3.5rem]">Financial Clarity Without the Hassle.</h2>
                 <h5 className="text-xl text-text-disabled">No tools, no training — simply send us your data and receive accurate financial reports you can trust.</h5>
               </div>
               <div className="flex flex-col space-y-4">
                 <div className="flex items-center justify-start space-x-2">
-                  <div className="bg-green-accent rounded-xl p-2 w-14 h-14 flex items-center justify-center">
+                  <div className="bg-green-accent rounded-xl p-2 w-16 h-16 md:w-14 md:h-14 xl:w-14 xl:h-14 flex items-center justify-center">
                     <img src="./done.png" className="w-9 h-9" alt="done" />
                   </div>
                   <div className="flex flex-col space-y-1">
@@ -303,7 +299,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-center justify-start space-x-2">
-                  <div className="bg-green-accent rounded-xl p-2 w-14 h-14 flex items-center justify-center">
+                  <div className="bg-green-accent rounded-xl p-2 w-20 h-16 md:w-14 md:h-14 xl:w-14 xl:h-14 flex items-center justify-center">
                     <img src="./easy.png" className="w-9 h-9" alt="easy" />
                   </div>
                   <div className="flex flex-col space-y-1">
@@ -318,17 +314,18 @@ export default function Home() {
       </div>
 
       {/* About Us section */}
-      <div className="bg-light h-screen text-text-dark lg:px-20 lg:py-5 xl:px-52 xl:py-10 xxl:space-y-0 xxxl:px-80 xxxl:py-10">
+      <div className="px-5 py-10 bg-light h-full text-text-dark border border-b border-grey-shade-3 xl:border-0 md:px-12 md:py-14 lg:px-20 lg:py-10 xl:px-44 xl:py-0
+      xxl:space-y-0 xxl:px-[12rem] xxl:scale-90 xxxl:scale-100 xxxl:px-80 xxxl:py-10 ">
         <div className="flex flex-col space-y-14">
-          <div className="flex justify-between space-y-3">
+          <div className="flex flex-col lg:flex-row justify-between">
             {/* Section 1 Left side */}
-            <div className="flex flex-col w-[50%] space-y-6">
+            <div className="flex flex-col lg:w-[47%] space-y-6 pb-4 lg:pb-0">
               <div className="w-36 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
                 <div className="w-2 h-2 bg-green-accent rounded-full" />
                 <p className="font-medium text-green-accent">What We Are</p>
               </div>
-              <div>
-                <h2 className="text-[3rem] font-medium leading-[4rem]">Your Finance, <br /> Our Focus.</h2>
+              <div className="">
+                <h2 className="text-[3rem] font-medium leading-[4rem]">Your Finance, <br className="hidden lg:block" /> Our Focus.</h2>
                 <h5 className="text-xl text-text-disabled">Smart reporting. Clear insights. Total control.</h5>
               </div>
               <p className="font-medium">At Finx, we help businesses take control of their finances with accurate, real-time reporting.
@@ -337,50 +334,46 @@ export default function Home() {
             </div>
 
             {/* Section 1 Right side */}
-            <div className="relative w-[50%] bg-card flex justify-center items-end rounded-2xl">
+            <div className="relative lg:w-[50%] bg-card flex justify-center items-end rounded-2xl">
               <img src="./what-we-are.svg" className="w-80   -bottom-5" alt="features-1" />
             </div>
-            <div>
-            </div>
           </div>
-          <div className="flex jsutify-between space-x-8 space-y-3 ">
+          <div className="flex flex-col lg:flex-row jsutify-between lg:space-x-8 lg:space-y-3 ">
             {/* Section 2 Left side */}
-            <div className="w-[50%]">
+            <div className="lg:w-[50%] order-2 pt-4 lg:pt-0">
               <div className="w-full bg-card h-full rounded-2xl flex items-center justify-center">
-                <ul className="grid grid-flow-row-dense grid-cols-2 px-8 gap-6">
+                <ul className="grid grid-flow-row-dense grid-cols-2 gap-3 py-4 px-4 lg:px-8 md:gap-8 lg:gap-12 md:py-6 ">
                   <div className="flex space-x-2 items-center ">
-                    <img src="./accrual-accounting.png" alt="" />
-                    <li className="pb-2 font-bold text-grey-shade-2 text-xl">Accrual Accounting</li>
+                    <img src="./accrual-accounting.png" className="w-8 md:w-12" alt="accrual" />
+                    <li className="pb-2 font-bold text-grey-shade-2 text-lg md:text-xl">Accrual Accounting</li>
                   </div>
                   <div className="flex space-x-2 items-center ">
-                    <img src="./cash-accounting.png" alt="" />
-                    <li className="pb-2 font-bold text-grey-shade-2 text-xl">Cash accounting</li>
+                    <img src="./cash-accounting.png" className="w-8 md:w-12" alt="cash" />
+                    <li className="pb-2 font-bold text-grey-shade-2 text-lg md:text-xl">Cash Accounting</li>
                   </div>
                   <div className="flex space-x-2 items-center ">
-                    <img src="./gaap.png" alt="" />
-                    <li className="pb-2 font-bold text-grey-shade-2 text-xl">GAAP</li>
+                    <img src="./gaap.png" alt="gaap" className="w-8 md:w-12" />
+                    <li className="pb-2 font-bold text-grey-shade-2 text-lg md:text-xl">GAAP</li>
                   </div>
                   <div className="flex space-x-2 items-center ">
-                    <img src="./financial-statements.png" alt="" />
-                    <li className="pb-2 font-bold text-grey-shade-2 text-xl">Financial Statements</li>
+                    <img src="./financial-statements.png" className="w-8 md:w-12" alt="financial" />
+                    <li className="pb-2 font-bold text-grey-shade-2 text-lg md:text-xl">Financial Statements</li>
                   </div>
                   <div className="flex space-x-2 items-center ">
-                    <img src="./budgeting.png" alt="" />
-                    <li className="pb-2 font-bold text-grey-shade-2 text-xl">Budgeting</li>
+                    <img src="./budgeting.png" className="w-8 md:w-12" alt="" />
+                    <li className="pb-2 font-bold text-grey-shade-2 text-lg md:text-xl">Budgeting</li>
                   </div>
                 </ul>
               </div>
             </div>
-            <div>
-            </div>
             {/* Section 2 Right side */}
-            <div className="flex flex-col w-[50%] space-y-6">
+            <div className="flex flex-col lg:w-[50%] space-y-6 lg:order-2">
               <div className="w-36 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
                 <div className="w-2 h-2 bg-green-accent rounded-full" />
                 <p className="font-medium text-green-accent">Our Principles</p>
               </div>
               <div>
-                <h2 className="text-[3rem] font-medium leading-[4rem]">Our Foundation built on <br /> Core Principles.</h2>
+                <h2 className="text-[3rem] font-medium leading-[4rem]">Our Foundation built on Core Principles.</h2>
                 <p className="text-xl text-text-disabled">From accrual and cash accounting to GAAP standards, budgeting, and financial statements — these are the fundamentals that power every Finx solution.</p>
               </div>
             </div>
@@ -389,77 +382,137 @@ export default function Home() {
       </div>
 
       {/* Why Us section*/}
-      <div className="bg-light justify-between h-screen text-text-dark text-center lg:px-20 lg:py-5 xl:px-52 xl:py-10 xxl:space-y-0 xxxl:px-80 xxxl:py-10">
-        <div className="flex flex-col items-center  space-y-14">
+      <div className="px-5 py-10 bg-light h-full text-text-dark border border-b border-grey-shade-3 xl:border-0 md:px-12 md:py-14 lg:px-20 lg:py-10 xl:px-52 xl:py-14
+      xxl:py-0 xxl:space-y-0 xxl:px-[5.5rem] xxl:scale-75 xxxl:scale-100 xxxl:px-80 xxxl:py-20">
+        <div className="flex flex-col md:items-center space-y-8 lg:space-y-14 md:text-center">
           <div className="w-24 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
             <div className="w-2 h-2 bg-green-accent rounded-full" />
             <p className="font-medium text-green-accent">Why Us?</p>
           </div>
-          <div className="flex flex-col space-y-4 items-center justify-center">
+          <div className="flex flex-col lg:space-y-4 md:items-center justify-center">
             <div className="flex space-x-2">
-              <h1 className="text-[4rem] font-medium leading-[4.5rem]">Why</h1>
+              <h1 className="text-[3rem] font-medium leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem]">Why</h1>
               <div className="flex flex-col items-center">
-                <h1 className="text-[4rem] text-green-accent font-medium leading-[4.5rem]">Finx?</h1>
-                <img src="./highlight-bar.svg" className="w-32" alt="highlight-bar" />
+                <h1 className="text-[3rem] font-medium leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] text-green-accent">Finx?</h1>
+                <img src="./highlight-bar.svg" className="w-28 lg:w-32" alt="highlight-bar" />
               </div>
             </div>
-            <h1 className="text-[4rem] font-medium leading-[4.5rem]">Because Precision Matters.</h1>
-            <h4 className="text-2xl text-text-disabled">Accurate, secure, and scalable financial reporting tools designed to <br /> streamline your operations and support confident decision-making.</h4>
+            <h1 className="text-[2.6rem] leading-[3.8rem] md:text-[3rem]  md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-medium">Because Precision Matters.</h1>
+            <h4 className="text-xl lg:text-2xl text-text-disabled">Accurate, secure, and scalable financial reporting tools designed to <br className="hidden lg:block" /> streamline your operations and support confident decision-making.</h4>
           </div>
 
           {/* Why Us Card section*/}
-          <div className="flex flex-col space-y-14">
-            <div className="flex justify-between ">
+          <div className="flex flex-col md:space-y-16 md:scale-75 lg:scale-100 w-full">
+            <div className="hidden md:flex justify-between xxxl:px-[1.5rem]">
               {/* Card 1 */}
-              <div className="relative w-72 inline-flex justify-center items-center">
+              <div className="relative w-72 flex justify-center items-center">
                 <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
                   <img src="./update.png" alt="update" className="w-14 ml-3" />
                 </div>
                 <div className="flex items-center text-left">
-                  <div className="w-16 h-32 absolute left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
                   <h4 className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Regularly <br /> Updating <br /> Records</h4>
                 </div>
               </div>
               {/* Card 2 */}
-              <div className="relative w-72 inline-flex justify-center items-center">
+              <div className="relative w-72 flex justify-center items-center">
                 <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
                   <img src="./accuracy.svg" alt="update" className="w-14 ml-3" />
                 </div>
                 <div className="flex items-center text-left">
-                  <div className="w-16 h-32 absolute left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
                   <h4 className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Ensuring <br /> Accuracy </h4>
                 </div>
               </div>
               {/* Card 3 */}
-              <div className="relative w-72 inline-flex justify-center items-center">
+              <div className="relative w-72 flex justify-center items-center">
                 <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
                   <img src="./control.svg" alt="update" className="w-14 ml-3" />
                 </div>
                 <div className="flex items-center text-left w-[6rem]">
-                  <div className="w-16 h-32 absolute left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
                   <h4 className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Implementing <br /> Controls</h4>
                 </div>
               </div>
             </div>
-            <div className="flex justify-between w-full px-32">
+            <div className="hidden md:flex justify-between w-full lg:px-[4rem] xxl:px-[12rem]">
               {/* Card 4 */}
-              <div className="relative w-72 inline-flex justify-center items-center">
+              <div className="relative w-72 flex justify-center items-center">
                 <div className="relative w-24 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
                   <img src="./audit.png" alt="update" className="w-16 ml-2" />
                 </div>
                 <div className="flex items-center text-left">
-                  <div className="w-16 h-32 absolute left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <div className="w-16 h-32 absolute left-[7rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
                   <h4 className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Conducting <br /> Audits & <br /> Reviews</h4>
                 </div>
               </div>
               {/* Card 5 */}
-              <div className="relative w-[26rem] inline-flex justify-center items-center ">
+              <div className="relative w-[26rem] flex justify-center items-center ">
                 <div className="relative w-22 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
                   <img src="./test-passed.png" alt="update" className="w-14 ml-3" />
                 </div>
                 <div className="flex items-center text-left w-[14rem]">
-                  <div className="w-16 h-32 absolute left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <div className="w-16 h-32 absolute left-[7rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
                   <h4 className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Staying Up-to-Date <br /> with Standards & <br /> Regulations</h4>
+                </div>
+              </div>
+            </div>
+            {/* Why Us Card - mobile section*/}
+            <div className="md:hidden w-full space-y-8">
+              {/* Card 1 */}
+              <div className=" flex ">
+                <div className=" w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
+                  <img src="./test-passed.png" alt="update" className="w-10 " />
+                </div>
+                <div className="relative flex items-center text-left">
+                  <div className="w-16 h-32 absolute -left-[1rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <h4 className="z-10 text-grey-shade-2 text-base font-medium">Staying Up-to-Date <br /> with Standards & <br /> Regulations</h4>
+                </div>
+              </div>
+              <div className="flex justify-between">
+                <div className="flex flex-col justify-between space-y-4">
+                  {/* Card 2 */}
+                  <div className="relative flex justify-start items-center">
+                    <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
+                      <img src="./control.svg" alt="update" className="w-10 " />
+                    </div>
+                    <div className="flex items-center text-left">
+                      <div className="w-16 h-32 absolute left-[3.8rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                      <h4 className="z-10 text-grey-shade-2 text-base font-medium">Implementing <br /> Controls</h4>
+                    </div>
+                  </div>
+                  {/* Card 3 */}
+                  <div className="relative flex justify-start items-center">
+                    <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
+                      <img src="./audit.png" alt="update" className="w-10 " />
+                    </div>
+                    <div className="flex items-center text-left">
+                      <div className="w-16 h-32 absolute left-[3.8rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                      <h4 className="z-10 text-grey-shade-2 text-base font-medium">Conducting <br /> Audits & <br /> Reviews</h4>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-end w-full space-y-4">
+                  {/* Card 4 */}
+                  <div className="relative flex justify-between items-center">
+                    <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
+                      <img src="./update.png" alt="update" className="w-10 " />
+                    </div>
+                    <div className="flex items-center text-left">
+                      <div className="w-16 h-32 absolute left-[3.8rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                      <h4 className="z-10 text-grey-shade-2 text-base font-medium">Regularly <br /> Updating <br /> Records</h4>
+                    </div>
+                  </div>
+                  {/* Card 5 */}
+                  <div className="relative flex justify-between items-center">
+                    <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
+                      <img src="./accuracy.svg" alt="update" className="w-10 " />
+                    </div>
+                    <div className="flex items-center text-left">
+                      <div className="w-16 h-32 absolute left-[3.6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                      <h4 className="z-10 text-grey-shade-2 text-base font-medium">Ensuring <br /> Accuracy</h4>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
