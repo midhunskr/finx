@@ -151,7 +151,7 @@ export default function Home() {
           {/* Card section - mobile screens */}
           <div className="xl:hidden flex items-center justify-center">
             <div className="relative z-20">
-              <img src="/card3_white.png" className="lg:w-[40rem] lg:hidden" alt="hero-image" />
+              <img src="/card3_white_large.png" className="lg:w-[40rem] lg:hidden" alt="hero-image" />
               <img src="/card3_white_large.png" className="lg:w-[44rem] hidden lg:block" alt="hero-image" />
             </div>
             <img src="./card1.png" className="absolute z-0 w-40 left-0 bottom-60 sm:bottom-64 md:bottom-[20rem] md:w-52 md:left-28
