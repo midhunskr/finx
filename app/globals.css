@@ -71,4 +71,9 @@ body {
     width: 100%;
     height: 100%;
   }
+
+  #sticky-nav-top,
+  #sticky-nav-bottom {
+    will-change: transform;
+  }
 }

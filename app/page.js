@@ -25,10 +25,13 @@ export default function Home() {
 
       // 🔥 Manually trigger the observer once for initial state
       const rect = trigger.getBoundingClientRect();
-      const isTriggerVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-      if (!isTriggerVisible) {
+      const isTriggerAboveViewport = trigger.getBoundingClientRect().bottom < 0;
+      if (isTriggerAboveViewport) {
         topNav?.classList.remove('translate-y-[-100%]');
         bottomNav?.classList.remove('translate-y-full');
+      } else {
+        topNav?.classList.add('translate-y-[-100%]');
+        bottomNav?.classList.add('translate-y-full');
       }
     }
 
