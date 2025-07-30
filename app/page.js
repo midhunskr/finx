@@ -6,35 +6,24 @@ export default function Home() {
   const sectionIds = ['service', 'features', 'about', 'highlight', 'contact'];
   const [activeLink, setActiveLink] = useState('service');
   useEffect(() => {
-    const trigger = document.querySelector('#nav-trigger');
+    // const trigger = document.querySelector('#nav-trigger');
     const topNav = document.querySelector('#sticky-nav-top');
     const bottomNav = document.querySelector('#sticky-nav-bottom');
 
-    // Observer for showing/hiding nav
-    const visibilityObserver = new IntersectionObserver(
-      ([entry]) => {
-        const isHidden = entry.isIntersecting;
-        topNav?.classList.toggle('translate-y-[-100%]', isHidden);
-        bottomNav?.classList.toggle('translate-y-full', isHidden);
-      },
-      { threshold: 0 }
-    );
+    // === 1. Scroll listener to toggle nav visibility ===
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 10) {
+        topNav?.classList.remove('translate-y-[-100%]');
+        bottomNav?.classList.remove('translate-y-full');
+      } else {
+        topNav?.classList.add('translate-y-[-100%]');
+        bottomNav?.classList.add('translate-y-full');
+      }
+    };
 
-    if (trigger) {
-      visibilityObserver.observe(trigger);
-      setTimeout(() => {
-        const rect = trigger.getBoundingClientRect();
-        const fullyOutOfView = rect.bottom <= 0 || rect.top >= window.innerHeight;
-
-        if (fullyOutOfView) {
-          topNav?.classList.remove('translate-y-[-100%]');
-          bottomNav?.classList.remove('translate-y-full');
-        } else {
-          topNav?.classList.add('translate-y-[-100%]');
-          bottomNav?.classList.add('translate-y-full');
-        }
-      }, 100);
-    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // run once on mount
 
     // Observer for active link
     const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
@@ -57,7 +46,7 @@ export default function Home() {
 
     // Cleanup
     return () => {
-      visibilityObserver.disconnect();
+      window.removeEventListener('scroll', handleScroll);
       activeLinkObserver.disconnect();
     };
   }, []);
@@ -223,8 +212,7 @@ export default function Home() {
       {/* Sticky Nav - Top (md and up) */}
       <div
         id="sticky-nav-top"
-        className="hidden md:block fixed top-0 w-full z-50 bg-light shadow-md transition-all translate-y-[-100%]"
-      >
+        className="hidden md:block fixed top-0 w-full z-50 bg-light shadow-md transition-all translate-y-[-100%]">
         <nav className="h-16 ">
           <ul className="flex items-center justify-between xxl:text-lg w-full font-medium py-5 md:px-12 lg:px-20 xl:px-40 xxl:px-64 xxxl:px-80">
             {sectionIds.map((id) => (
@@ -262,7 +250,7 @@ export default function Home() {
         </nav>
       </div>
 
-      <div id="nav-trigger" className="h-1" />
+      {/* <div id="nav-trigger" className="h-1" /> */}
 
       {/* Service section*/}
       <div id="service" className="px-5 py-10 h-full border border-b border-grey-shade-3 xl:border-0 lg:px-20 md:text-center md:px-12 md:py-14 xl:px-40 xl:py-10 xxl:px-64 xxl:py-5
