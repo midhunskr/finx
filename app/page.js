@@ -1,37 +1,32 @@
 'use client'
 
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const sectionIds = ['service', 'features', 'about', 'highlight', 'contact'];
   const [activeLink, setActiveLink] = useState(null);
   useEffect(() => {
-    // === Sticky Nav Visibility Observer ===
     const trigger = document.querySelector('#nav-trigger');
     const topNav = document.querySelector('#sticky-nav-top');
     const bottomNav = document.querySelector('#sticky-nav-bottom');
 
+    // Observer for showing/hiding nav
     const visibilityObserver = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting) {
-          topNav?.classList.remove('translate-y-[-100%]');
-          bottomNav?.classList.remove('translate-y-full');
-        } else {
-          topNav?.classList.add('translate-y-[-100%]');
-          bottomNav?.classList.add('translate-y-full');
-        }
+        const isHidden = entry.isIntersecting;
+        topNav?.classList.toggle('translate-y-[-100%]', isHidden);
+        bottomNav?.classList.toggle('translate-y-full', isHidden);
       },
       { threshold: 0 }
     );
 
     if (trigger) visibilityObserver.observe(trigger);
 
-    // === Section Tracking Observer for Active Link ===
+    // Observer for active link
     const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
     const activeLinkObserver = new IntersectionObserver(
-      entries => {
+      (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             setActiveLink(entry.target.id);
@@ -46,6 +41,7 @@ export default function Home() {
 
     sections.forEach(section => activeLinkObserver.observe(section));
 
+    // Cleanup
     return () => {
       visibilityObserver.disconnect();
       activeLinkObserver.disconnect();
