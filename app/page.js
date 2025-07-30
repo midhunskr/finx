@@ -68,7 +68,7 @@ export default function Home() {
         <div className="absolute w-60 h-60 bottom-2 rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
         <div className="absolute w-60 h-60 right-[5rem] top-[9rem] md:right-[10rem] lg:right-[20rem] xxl:right-[30rem]
         xxxl:right-[40rem] rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
-        <div className="relative h-screen p-5 space-y-0 md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
+        <div className="relative h-full p-5 space-y-0 md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
         z-10 flex flex-col justify-between ">
           {/* Nav bar */}
           <nav className="flex justify-between items-center h-[3.5rem] rounded-full">
@@ -185,15 +185,15 @@ export default function Home() {
                 <div className="w-full h-20 xxxl:w-72 xxxl:h-28 flex items-center space-x-3 bg-card-glass p-3 rounded-xl bg-opacity-100 border border-light border-opacity-10">
                   <div className="flex justify-between items-center w-full">
                     <div className="relative flex items-center">
-                      <div className="absolute xxl:w-10 xxl:h-10 xxxl:w-14 xxxl:h-14 bg-green-accent bg-[url('/profile1.png')] bg-cover bg-center rounded-full
+                      <div className="absolute xl:w-14 h-14 xxl:w-10 xxl:h-10 xxxl:w-14 xxxl:h-14 bg-green-accent bg-[url('/profile1.png')] bg-cover bg-center rounded-full
                         border-[.2rem] border-light" />
-                      <div className="absolute xxl:w-10 xxl:h-10 xxxl:w-14 xxxl:h-14 bg-light-blue bg-[url('/profile2.png')] bg-cover bg-center rounded-full
-                        border-[.2rem] border-light left-6 xxl:left-10  xxxl:left-8" />
-                      <div className="absolute xxl:w-10 xxl:h-10 xxxl:w-14 xxxl:h-14 bg-light-purple bg-[url('/profile3.png')] bg-cover bg-center rounded-full
-                        border-[.2rem] border-light left-12 xxl:left-20 xxxl:left-16" />
+                      <div className="absolute xl:w-14 h-14 xxl:w-10 xxl:h-10 xxxl:w-14 xxxl:h-14 bg-light-blue bg-[url('/profile2.png')] bg-cover bg-center rounded-full
+                        border-[.2rem] border-light left-6 xl:left-8 xxl:left-6  xxxl:left-8" />
+                      <div className="absolute xl:w-14 h-14 xxl:w-10 xxl:h-10 xxxl:w-14 xxxl:h-14 bg-light-purple bg-[url('/profile3.png')] bg-cover bg-center rounded-full
+                        border-[.2rem] border-light left-12 xl:left-16 xxl:left-12 xxxl:left-16" />
                     </div>
                     <div>
-                      <p className="font-bold xxxl:text-2xl">99.25K+</p>
+                      <p className="font-bold xxxl:text-2xl">6.3K+</p>
                       <p className="text-text-disabled lg:text-sm xxxl:text-xl">Trusted Users</p>
                     </div>
                   </div>
@@ -625,10 +625,13 @@ export default function Home() {
         <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row justify-between w-full">
           <div className="flex flex-col text-left space-y-2">
             <h5 className="font-medium text-xl">Contact Us</h5>
-            <div>
+            <div className="">
               <div className="flex space-x-4">
                 <h6 className="text-text-disabled">Phone:</h6>
-                <p>+91 949 743 6877</p>
+                <div className="w-full">
+                  <p>+91 938 747 9905</p>
+                  <p>+966 53 609 6221</p>
+                </div>
               </div>
               <div className="flex space-x-4">
                 <h6 className="text-text-disabled">Hours:</h6>
@@ -645,9 +648,18 @@ export default function Home() {
           </div>
           <div className="flex items-start">
             <div className="flex space-x-4 items-center justify-center">
-              <img src="./bxl-facebook.svg" className="w-6" alt="facebook" />
-              <img src="./instagram-logo.svg" className="w-10" alt="instagram" />
-              <img src="./linkedin.svg" className="w-12" alt="linkedin" />
+              <a href="https://wa.me/+919497436877" target="_blank" rel="noopener noreferrer">
+                <img src="./whatsapp.svg" className="w-10 cursor-pointer" alt="facebook" />
+              </a>
+              <a href="https://www.facebook.com/share/12MTGYfVKXv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                <img src="./bxl-facebook.svg" className="w-6 cursor-pointer" alt="facebook" />
+              </a>
+              <a href="https://www.instagram.com/fin.x.official?igsh=MWlqM2V3a3VxM2diZw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                <img src="./instagram-logo.svg" className="w-10 cursor-pointer" alt="instagram" />
+              </a>
+              <a href="https://www.linkedin.com/company/finxofficial/" target="_blank" rel="noopener noreferrer">
+                <img src="./linkedin.svg" className="w-12 cursor-pointer" alt="linkedin" />
+              </a>
             </div>
           </div>
         </div>
