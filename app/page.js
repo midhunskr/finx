@@ -233,7 +233,7 @@ export default function Home() {
 
       {/* Sticky Nav - Bottom (sm and xs only) */}
       <div id="sticky-nav-bottom" className="md:hidden fixed bottom-4 left-4 right-3 rounded-full z-50 bg-light
-      shadow-md transition-all translate-y-full border border-text-disabled">
+      shadow-lg transition-all translate-y-full border border-grey-shade-3">
         <nav className="flex h-14 items-center justify-center">
           <ul className="flex space-x-4 text-sm sm:text-base sm:space-x-4 font-medium justify-between items-center ">
             {sectionIds.map((id) => (
