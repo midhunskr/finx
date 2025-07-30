@@ -20,7 +20,17 @@ export default function Home() {
       { threshold: 0 }
     );
 
-    if (trigger) visibilityObserver.observe(trigger);
+    if (trigger) {
+      visibilityObserver.observe(trigger);
+
+      // 🔥 Manually trigger the observer once for initial state
+      const rect = trigger.getBoundingClientRect();
+      const isTriggerVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      if (!isTriggerVisible) {
+        topNav?.classList.remove('translate-y-[-100%]');
+        bottomNav?.classList.remove('translate-y-full');
+      }
+    }
 
     // Observer for active link
     const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
