@@ -75,5 +75,6 @@ body {
   #sticky-nav-top,
   #sticky-nav-bottom {
     will-change: transform;
+    transition: transform 0.3s ease;
   }
 }

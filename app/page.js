@@ -22,17 +22,18 @@ export default function Home() {
 
     if (trigger) {
       visibilityObserver.observe(trigger);
+      setTimeout(() => {
+        const rect = trigger.getBoundingClientRect();
+        const fullyOutOfView = rect.bottom <= 0 || rect.top >= window.innerHeight;
 
-      // 🔥 Manually trigger the observer once for initial state
-      const rect = trigger.getBoundingClientRect();
-      const isTriggerAboveViewport = trigger.getBoundingClientRect().bottom < 0;
-      if (isTriggerAboveViewport) {
-        topNav?.classList.remove('translate-y-[-100%]');
-        bottomNav?.classList.remove('translate-y-full');
-      } else {
-        topNav?.classList.add('translate-y-[-100%]');
-        bottomNav?.classList.add('translate-y-full');
-      }
+        if (fullyOutOfView) {
+          topNav?.classList.remove('translate-y-[-100%]');
+          bottomNav?.classList.remove('translate-y-full');
+        } else {
+          topNav?.classList.add('translate-y-[-100%]');
+          bottomNav?.classList.add('translate-y-full');
+        }
+      }, 100);
     }
 
     // Observer for active link
@@ -68,7 +69,7 @@ export default function Home() {
         <div className="absolute w-60 h-60 bottom-2 rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
         <div className="absolute w-60 h-60 right-[5rem] top-[9rem] md:right-[10rem] lg:right-[20rem] xxl:right-[30rem]
         xxxl:right-[40rem] rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
-        <div className="relative min-h-screen p-5 space-y-0 md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
+        <div className="relative min-h-screen px-5 py-14 space-y-0 md:px-12 md:py-5 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
         z-10 flex flex-col justify-between ">
           {/* Nav bar */}
           <nav className="flex justify-between items-center h-[3.5rem] rounded-full">
