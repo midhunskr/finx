@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function Home() {
   const sectionIds = ['service', 'features', 'about', 'highlight', 'contact'];
-  const [activeLink, setActiveLink] = useState('service');
+  const [activeLink, setActiveLink] = useState(null);
   useEffect(() => {
     // === Sticky Nav Visibility Observer ===
     const trigger = document.querySelector('#nav-trigger');
@@ -64,7 +64,7 @@ export default function Home() {
           {/* Nav bar */}
           <nav className="flex justify-between items-center h-[3.5rem] rounded-full">
             <div>
-              <img src="./logo.png" className="w-24 md:w-[5rem] lg:w-[5rem] xl:w-[6rem] xxxl:w-[7rem]" alt="" />
+              <img src="./logo.png" className="w-32 md:w-[7rem] xl:w-[8rem] xxxl:w-[9rem]" alt="" />
             </div>
             <div />
           </nav>
@@ -74,9 +74,9 @@ export default function Home() {
             <div className="flex space-x-2 xxxl:space-x-4 p-1 items-center justify-between bg-light bg-opacity-10
             rounded-full border border-light border-opacity-10">
               <div className="w-12 xxl:w-16 xxl:h-6 bg-lime flex items-center justify-center rounded-full">
-                <p className="text-text-dark text-sm md:text-lg xxxl:text-lg">New</p>
+                <p className="text-text-dark text-xs md:text-lg xxxl:text-lg">New</p>
               </div>
-              <p className="pr-2 text-sm md:text-lg">Inventory report upgraded.</p>
+              <p className="pr-2 text-xs md:text-lg">Inventory report upgraded.</p>
             </div>
             <div className="flex flex-col md:items-center space-y-6 xl:space-y-6 xxxl:space-y-8">
               <div className="w-full md:text-center space-y-1 xl:space-y-2 xxxl:space-y-3">
@@ -431,11 +431,11 @@ export default function Home() {
             <div className="lg:w-[50%] order-2 pt-4 lg:pt-0">
               <div className="w-full bg-card h-full rounded-2xl flex items-center justify-center">
                 <ul className="grid grid-flow-row-dense grid-cols-2 gap-3 py-4 px-4 lg:px-8 md:gap-8 lg:gap-12 md:py-6 ">
-                  <div className="flex space-x-2 items-center ">
+                  <div className="flex space-x-2 items-start xxxl:items-center ">
                     <img src="./accrual-accounting.png" className="w-8 md:w-12" alt="accrual" />
                     <li className="pb-2 font-bold text-grey-shade-2 text-lg md:text-xl">Accrual Accounting</li>
                   </div>
-                  <div className="flex space-x-2 items-center ">
+                  <div className="flex space-x-2 items-start xxxl:items-center ">
                     <img src="./cash-accounting.png" className="w-8 md:w-12" alt="cash" />
                     <li className="pb-2 font-bold text-grey-shade-2 text-lg md:text-xl">Cash Accounting</li>
                   </div>
@@ -443,7 +443,7 @@ export default function Home() {
                     <img src="./gaap.png" alt="gaap" className="w-8 md:w-12" />
                     <li className="pb-2 font-bold text-grey-shade-2 text-lg md:text-xl">GAAP</li>
                   </div>
-                  <div className="flex space-x-2 items-center ">
+                  <div className="flex space-x-2 items-start xxxl:items-center ">
                     <img src="./financial-statements.png" className="w-8 md:w-12" alt="financial" />
                     <li className="pb-2 font-bold text-grey-shade-2 text-lg md:text-xl">Financial Statements</li>
                   </div>
@@ -630,8 +630,7 @@ export default function Home() {
           <div className="flex flex-col text-left space-y-2">
             <h5 className="font-medium text-xl">Locate Us</h5>
             <div className="flex flex-col">
-              <h6>Al Malaz,</h6>
-              <h6>Riyadh,</h6>
+              <h6>Al Malaz Riyadh,</h6>
               <h6>Saudi Arabia.</h6>
             </div>
           </div>
