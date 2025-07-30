@@ -6,24 +6,30 @@ export default function Home() {
   const sectionIds = ['service', 'features', 'about', 'highlight', 'contact'];
   const [activeLink, setActiveLink] = useState('service');
   useEffect(() => {
-    // const trigger = document.querySelector('#nav-trigger');
     const topNav = document.querySelector('#sticky-nav-top');
     const bottomNav = document.querySelector('#sticky-nav-bottom');
 
     // === 1. Scroll listener to toggle nav visibility ===
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      if (scrollY > 10) {
+      const windowHeight = window.innerHeight;
+      const fullHeight = document.body.scrollHeight;
+
+      const isAtBottom = scrollY + windowHeight >= fullHeight - 50; // 50px buffer from bottom
+
+      if (scrollY > 10 && !isAtBottom) {
+        // Show navs when scrolled and not at bottom
         topNav?.classList.remove('translate-y-[-100%]');
         bottomNav?.classList.remove('translate-y-full');
       } else {
+        // Hide navs either at top or bottom of page
         topNav?.classList.add('translate-y-[-100%]');
         bottomNav?.classList.add('translate-y-full');
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // run once on mount
+    handleScroll();
 
     // Observer for active link
     const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
@@ -44,7 +50,6 @@ export default function Home() {
 
     sections.forEach(section => activeLinkObserver.observe(section));
 
-    // Cleanup
     return () => {
       window.removeEventListener('scroll', handleScroll);
       activeLinkObserver.disconnect();
@@ -233,7 +238,7 @@ export default function Home() {
 
       {/* Sticky Nav - Bottom (sm and xs only) */}
       <div id="sticky-nav-bottom" className="md:hidden fixed bottom-4 left-4 right-3 rounded-full z-50 bg-light
-      shadow-lg transition-all translate-y-full border border-grey-shade-3">
+      shadow-lg transition-all transform translate-y-full border border-grey-shade-3">
         <nav className="flex h-14 items-center justify-center">
           <ul className="flex space-x-4 text-sm sm:text-base sm:space-x-4 font-medium justify-between items-center ">
             {sectionIds.map((id) => (
@@ -250,8 +255,6 @@ export default function Home() {
           </ul>
         </nav>
       </div>
-
-      {/* <div id="nav-trigger" className="h-1" /> */}
 
       {/* Service section*/}
       <div id="service" className="px-5 py-10 h-full border border-b border-grey-shade-3 xl:border-0 lg:px-20 md:text-center md:px-12 md:py-14 xl:px-40 xl:py-10 xxl:px-64 xxl:py-5
