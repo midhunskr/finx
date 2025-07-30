@@ -214,7 +214,7 @@ export default function Home() {
         id="sticky-nav-top"
         className="hidden md:block fixed top-0 w-full z-50 bg-light shadow-md transition-all translate-y-[-100%]">
         <nav className="h-16 ">
-          <ul className="flex items-center justify-between xxl:text-lg w-full font-medium py-5 md:px-12 lg:px-20 xl:px-40 xxl:px-64 xxxl:px-80">
+          <ul className="flex items-center justify-between w-full font-medium py-5 md:px-12 lg:px-20 xl:px-40 xxl:px-64 xxxl:px-80">
             {sectionIds.map((id) => (
               <li key={id}>
                 <a
@@ -232,9 +232,10 @@ export default function Home() {
 
 
       {/* Sticky Nav - Bottom (sm and xs only) */}
-      <div id="sticky-nav-bottom" className="md:hidden fixed bottom-5 w-full z-50 bg-light shadow-md transition-all translate-y-full">
-        <nav className="flex h-16 px-4">
-          <ul className="flex space-x-2 sm:space-x-4 xxl:text-lg font-medium justify-between items-center w-full">
+      <div id="sticky-nav-bottom" className="md:hidden fixed bottom-4 left-4 right-3 rounded-full z-50 bg-light
+      shadow-md transition-all translate-y-full border border-text-disabled">
+        <nav className="flex h-14 items-center justify-center">
+          <ul className="flex space-x-4 text-sm sm:text-base sm:space-x-4 font-medium justify-between items-center ">
             {sectionIds.map((id) => (
               <li key={id}>
                 <a
