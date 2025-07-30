@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const sectionIds = ['service', 'features', 'about', 'highlight', 'contact'];
-  const [activeLink, setActiveLink] = useState(null);
+  const [activeLink, setActiveLink] = useState('service');
   useEffect(() => {
     const trigger = document.querySelector('#nav-trigger');
     const topNav = document.querySelector('#sticky-nav-top');
@@ -69,7 +69,7 @@ export default function Home() {
         <div className="absolute w-60 h-60 bottom-2 rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
         <div className="absolute w-60 h-60 right-[5rem] top-[9rem] md:right-[10rem] lg:right-[20rem] xxl:right-[30rem]
         xxxl:right-[40rem] rounded-full bg-lime blur-[6rem] mix-blend-overlay opacity-" />
-        <div className="relative min-h-screen px-5 py-14 space-y-0 md:px-12 md:py-5 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
+        <div className="relative h-screen px-5 py-5 space-y-0 md:px-12 md:py-5 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10
         z-10 flex flex-col justify-between ">
           {/* Nav bar */}
           <nav className="flex justify-between items-center h-[3.5rem] rounded-full">
