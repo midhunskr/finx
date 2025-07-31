@@ -88,10 +88,12 @@ export default function Home() {
                 font-medium lg:leading-[4.5rem]">Focused success<br />with smart finance.</h1>
                 <h4 className="md:text-xl xxxl:text-2xl">Track performance, identify trends, and plan<br />ahead with intelligent financial reports.</h4>
               </div>
-              <div className="w-40 h-10 md:w-44 md:h-14 xxxl:w-52 space-x-4 xxxl:space-x-4 flex items-center jsutify-center bg-green-accent rounded-full px-4 md:py-1 xxxl:px-4 xxxl:py-3">
-                <p className="md:text-lg xxxl:text-2xl">Get in touch</p>
-                <img src="./arrow-right.svg" className="lg:w-5" alt="arrow-right" />
-              </div>
+              <a href="#contact">
+                <button className="w-40 h-10 md:w-44 md:h-14 xxxl:w-52 space-x-4 xxxl:space-x-4 flex items-center jsutify-center bg-green-accent rounded-full px-4 md:py-1 xxxl:px-4 xxxl:py-3">
+                  <p className="md:text-lg xxxl:text-2xl">Get in touch</p>
+                  <img src="./arrow-right.svg" className="lg:w-5" alt="arrow-right" />
+                </button>
+              </a>
             </div>
           </div>
 
@@ -618,17 +620,21 @@ export default function Home() {
         <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row justify-between w-full">
           <div className="flex flex-col text-left space-y-2">
             <h5 className="font-medium text-xl">Contact Us</h5>
-            <div className="">
+            <div className="flex flex-col space-y-2">
               <div className="flex space-x-4">
-                <h6 className="text-text-disabled">Phone:</h6>
+                <h6 className="text-text-disabled w-10">Phone:</h6>
                 <div className="w-full">
                   <p>+91 938 747 9905</p>
                   <p>+966 53 609 6221</p>
                 </div>
               </div>
               <div className="flex space-x-4">
-                <h6 className="text-text-disabled">Hours:</h6>
+                <h6 className="text-text-disabled w-10">Hours:</h6>
                 <p>9:00 AM - 5:00 PM</p>
+              </div>
+              <div  className="flex space-x-4">
+                <h6 className="text-text-disabled w-10">Email:</h6>
+                <p>info@finxofficial.com</p>
               </div>
             </div>
           </div>
