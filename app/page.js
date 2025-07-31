@@ -353,7 +353,7 @@ export default function Home() {
                   </div>
                   <div className="flex space-x-2 items-center ">
                     <img src="./check.svg" className="w-5" alt="check" />
-                    <li>Ready-to-use inancial statements</li>
+                    <li>Ready-to-use financial statements</li>
                   </div>
                 </ul>
               </div>
