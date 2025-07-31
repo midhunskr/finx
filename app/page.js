@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const sectionIds = ['service', 'features', 'about', 'highlight', 'contact'];
+  const sectionIds = ['services', 'features', 'about', 'value', 'contact'];
   const [activeLink, setActiveLink] = useState('service');
   useEffect(() => {
     const topNav = document.querySelector('#sticky-nav-top');
@@ -257,7 +257,7 @@ export default function Home() {
       </div>
 
       {/* Service section*/}
-      <div id="service" className="px-5 py-10 h-full border border-b border-grey-shade-3 xl:border-0 lg:px-20 md:text-center md:px-12 md:py-14 xl:px-40 xl:py-10 xxl:px-64 xxl:py-5
+      <div id="services" className="px-5 py-10 h-full border border-b border-grey-shade-3 xl:border-0 lg:px-20 md:text-center md:px-12 md:py-14 xl:px-40 xl:py-10 xxl:px-64 xxl:py-5
       xxxl:px-80 xxxl:py-10 bg-light text-text-dark">
         <div className="flex flex-col md:items-center h-full justify-between space-y-6 xl:space-y-8">
           <div className="w-24 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
@@ -472,7 +472,7 @@ export default function Home() {
       </div>
 
       {/* Highlight section*/}
-      <div id="highlight" className="px-5 py-10 bg-light h-full text-text-dark border border-b border-grey-shade-3 xl:border-0 md:px-12 md:py-14 lg:px-20 lg:py-10 xl:px-52 xl:py-14
+      <div id="value" className="px-5 py-10 bg-light h-full text-text-dark border border-b border-grey-shade-3 xl:border-0 md:px-12 md:py-14 lg:px-20 lg:py-10 xl:px-52 xl:py-14
       xxl:py-0 xxl:space-y-0 xxl:px-[5.5rem] xxl:scale-75 xxxl:scale-100 xxxl:px-80 xxxl:py-20">
         <div className="flex flex-col md:items-center space-y-8 lg:space-y-14 md:text-center">
           <div className="w-24 flex items-center justify-center space-x-2 border border-green-accent rounded-full">
