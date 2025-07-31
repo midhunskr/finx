@@ -9,7 +9,7 @@ export default function Home() {
     const topNav = document.querySelector('#sticky-nav-top');
     const bottomNav = document.querySelector('#sticky-nav-bottom');
 
-    // === 1. Scroll listener to toggle nav visibility ===
+    // Scroll listener to toggle nav visibility
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
@@ -236,7 +236,6 @@ export default function Home() {
           </ul>
         </nav>
       </div>
-
 
       {/* Sticky Nav - Bottom (sm and xs only) */}
       <div id="sticky-nav-bottom" className="md:hidden fixed bottom-4 left-4 right-3 rounded-full z-50 bg-light

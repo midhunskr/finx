@@ -1,5 +1,6 @@
 import { Lexend } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const lexendSans = Lexend({
   variable: "--font-lexend-sans",
@@ -18,6 +19,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${lexendSans.variable} antialiased overflow-y-scroll snap-y snap-mandatory`}>
+        {/* ✅ Umami Tracking Script */}
+        <Script
+          async
+          defer
+          data-website-id="d829651f-2cca-41f4-a3ca-0a3690db4608"
+          src="https://umami-one-theta.vercel.app/umami.js"
+        />
         <main>{children}</main>
         <footer className="px-5 py-10 bg-green-dark justify-between text-light text-center md:px-12 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10">
           <div className="flex flex-col items-start justify-between space-y-4">
