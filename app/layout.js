@@ -25,6 +25,14 @@ export const metadata = {
     siteName: 'Finx',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Finx — Effortless Financial Reporting',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -39,7 +47,7 @@ const structuredData = {
   name: "Finx",
   description: "Accurate financial reporting and bookkeeping services for businesses",
   url: "https://www.finxofficial.com",
-  telephone: ["+919387479905", "+966536096221"],
+  telephone: ["+919497436877", "+966536096221"],
   email: "info@finxofficial.com",
   address: {
     "@type": "PostalAddress",

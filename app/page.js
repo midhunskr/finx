@@ -504,7 +504,7 @@ export default function Home() {
               <div className="flex space-x-4">
                 <span className="text-text-disabled w-10">Phone:</span>
                 <div className="w-full">
-                  <p>+91 938 747 9905</p>
+                  <p>+91 949 743 6877</p>
                   <p>+966 53 609 6221</p>
                 </div>
               </div>
