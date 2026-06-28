@@ -39,7 +39,7 @@ export default function Home() {
                 className="w-40 h-10 md:w-44 md:h-14 xxxl:w-52 space-x-4 flex items-center justify-center bg-green-accent rounded-full px-4 md:py-1 xxxl:px-4 xxxl:py-3"
               >
                 <span className="md:text-lg xxxl:text-2xl">Get in touch</span>
-                <img src="/arrow-right.svg" className="lg:w-5" alt="" />
+                <Image src="/arrow-right.svg" width={20} height={20} className="lg:w-5" alt="" />
               </a>
             </div>
           </div>
@@ -62,13 +62,13 @@ export default function Home() {
               </div>
               <div className="space-x-4 flex items-start justify-between">
                 <div className="lg:h-20 xxl:w-72 xxxl:h-28 flex items-center space-x-5 bg-card-glass px-5 py-3 rounded-2xl border border-light border-opacity-10">
-                  <img src="/received-icon.svg" alt="" className="lg:w-10 xxxl:w-16" />
+                  <Image src="/received-icon.svg" width={40} height={40} alt="" className="lg:w-10 xxxl:w-16" />
                   <div className="flex flex-col">
                     <p className="text-text-disabled lg:text-sm xxxl:text-lg">Received</p>
                     <p className="font-bold lg:text-md xxxl:text-xl">5780.00 EUR</p>
                   </div>
                 </div>
-                <img src="/dollar.svg" className="hidden lg:block lg:w-12 xxxl:w-16" alt="" />
+                <Image src="/dollar.svg" width={48} height={48} className="hidden lg:block lg:w-12 xxxl:w-16" alt="" />
               </div>
             </div>
 
@@ -82,7 +82,7 @@ export default function Home() {
                   <div className="flex justify-between items-center space-x-2">
                     <Image src="/sales.png" width={24} height={24} className="w-6 h-6" alt="" />
                     <p className="font-bold lg:text-base xxxl:text-xl">Retail Sales</p>
-                    <img src="/down-arrow.svg" className="w-4" alt="" />
+                    <Image src="/down-arrow.svg" width={16} height={16} className="w-4" alt="" />
                   </div>
                   <p className="font-bold lg:text-base xxxl:text-xl">Total Retail Sales</p>
                 </div>
@@ -90,7 +90,7 @@ export default function Home() {
                   <div className="flex justify-between items-center space-x-2">
                     <Image src="/calendar.png" width={24} height={24} className="w-6 h-6" alt="" />
                     <p className="font-bold lg:text-base xxxl:text-xl">July 17</p>
-                    <img src="/down-arrow.svg" className="w-4" alt="" />
+                    <Image src="/down-arrow.svg" width={16} height={16} className="w-4" alt="" />
                   </div>
                   <p className="font-bold lg:text-base xxxl:text-xl">SAR 92500.00</p>
                 </div>
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex items-end space-x-4 justify-between">
-                <img src="/ledger.svg" className="hidden lg:block lg:w-12 xxxl:w-16" alt="" />
+                <Image src="/ledger.svg" width={48} height={48} className="hidden lg:block lg:w-12 xxxl:w-16" alt="" />
                 <div className="w-full h-20 xxxl:w-72 xxxl:h-28 flex items-center space-x-3 bg-card-glass p-3 rounded-xl border border-light border-opacity-10">
                   <div className="flex justify-between items-center w-full">
                     <div className="relative flex items-center">
@@ -169,24 +169,24 @@ export default function Home() {
           <div className="flex flex-col space-y-2 lg:space-y-0 lg:flex-row justify-between lg:space-x-2 bg-card p-2 rounded-3xl w-full">
             {/* Book-Keeping */}
             <div className="flex flex-col md:flex-row justify-between px-6 space-x-2 lg:space-x-0 lg:flex-col items-center bg-light rounded-2xl xxl:p-2 xxxl:p-4 w-full py-8">
-              <img src="/book-keeping.svg" className="md:order-2 lg:order-1 xl:w-[8rem] xxl:w-[12rem] xxxl:w-[16rem] py-2" alt="" />
+              <Image src="/book-keeping.svg" width={256} height={256} className="md:order-2 lg:order-1 xl:w-[8rem] xxl:w-[12rem] xxxl:w-[16rem] py-2" style={{ height: 'auto' }} alt="" />
               <div className="flex flex-col h-full space-y-2 text-left py-2 lg:order-2">
                 <h3 className="text-center font-bold md:text-lg xxxl:text-2xl">Book-Keeping</h3>
                 <ul className="flex flex-col space-y-2">
                   <li className="flex space-x-2 items-start">
-                    <img src="/check.svg" className="w-5 shrink-0 mt-1" alt="" />
+                    <Image src="/check.svg" width={20} height={20} className="w-5 shrink-0 mt-1" alt="" />
                     <span className="xxxl:text-xl">Recording transactions (income, expenses, assets, liabilities, equity)</span>
                   </li>
                   <li className="flex space-x-2 items-center">
-                    <img src="/check.svg" className="w-5 shrink-0" alt="" />
+                    <Image src="/check.svg" width={20} height={20} className="w-5 shrink-0" alt="" />
                     <span className="xxxl:text-xl">Maintaining accurate records</span>
                   </li>
                   <li className="flex space-x-2 items-center">
-                    <img src="/check.svg" className="w-5 shrink-0" alt="" />
+                    <Image src="/check.svg" width={20} height={20} className="w-5 shrink-0" alt="" />
                     <span className="xxxl:text-xl">Reconciling accounts</span>
                   </li>
                   <li className="flex space-x-2 items-center">
-                    <img src="/check.svg" className="w-5 shrink-0" alt="" />
+                    <Image src="/check.svg" width={20} height={20} className="w-5 shrink-0" alt="" />
                     <span className="xxxl:text-xl">Preparing financial statements</span>
                   </li>
                 </ul>
@@ -195,24 +195,24 @@ export default function Home() {
 
             {/* Accounting */}
             <div className="flex flex-col md:flex-row justify-between px-6 space-x-2 lg:space-x-0 lg:flex-col items-center bg-light rounded-2xl xxl:p-2 xxxl:p-4 w-full py-8">
-              <img src="/accounting.svg" className="xl:w-[10.5rem] xxl:w-[15.5rem] xxxl:w-[20.5rem] py-2" alt="" />
+              <Image src="/accounting.svg" width={256} height={256} className="xl:w-[10.5rem] xxl:w-[15.5rem] xxxl:w-[20.5rem] py-2" style={{ height: 'auto' }} alt="" />
               <div className="flex flex-col h-full space-y-2 text-left py-2">
                 <h3 className="text-center font-bold md:text-lg xxxl:text-2xl">Accounting</h3>
                 <ul className="flex flex-col space-y-2">
                   <li className="flex space-x-2 items-center">
-                    <img src="/check.svg" className="w-5 shrink-0" alt="" />
+                    <Image src="/check.svg" width={20} height={20} className="w-5 shrink-0" alt="" />
                     <span className="xxxl:text-xl">Analyzing transactions</span>
                   </li>
                   <li className="flex space-x-2 items-center">
-                    <img src="/check.svg" className="w-5 shrink-0" alt="" />
+                    <Image src="/check.svg" width={20} height={20} className="w-5 shrink-0" alt="" />
                     <span className="xxxl:text-xl">Preparing reports</span>
                   </li>
                   <li className="flex space-x-2 items-start">
-                    <img src="/check.svg" className="w-5 shrink-0 mt-1" alt="" />
+                    <Image src="/check.svg" width={20} height={20} className="w-5 shrink-0 mt-1" alt="" />
                     <span className="xxxl:text-xl">Ensuring compliance with standards and regulations</span>
                   </li>
                   <li className="flex space-x-2 items-center">
-                    <img src="/check.svg" className="w-5 shrink-0" alt="" />
+                    <Image src="/check.svg" width={20} height={20} className="w-5 shrink-0" alt="" />
                     <span className="xxxl:text-xl">Providing insights and recommendations</span>
                   </li>
                 </ul>
@@ -238,29 +238,29 @@ export default function Home() {
               </div>
               <ul className="flex flex-col space-y-2 font-medium text-lg">
                 <li className="flex space-x-2 items-center">
-                  <img src="/check.svg" className="w-5 shrink-0" alt="" />
+                  <Image src="/check.svg" width={20} height={20} className="w-5 shrink-0" alt="" />
                   <span>Real-time sales and expense tracking</span>
                 </li>
                 <li className="flex space-x-2 items-center">
-                  <img src="/check.svg" className="w-5 shrink-0" alt="" />
+                  <Image src="/check.svg" width={20} height={20} className="w-5 shrink-0" alt="" />
                   <span>Automated inventory insights</span>
                 </li>
                 <li className="flex space-x-2 items-center">
-                  <img src="/check.svg" className="w-5 shrink-0" alt="" />
+                  <Image src="/check.svg" width={20} height={20} className="w-5 shrink-0" alt="" />
                   <span>Ready-to-use financial statements</span>
                 </li>
               </ul>
             </div>
             {/* Right */}
             <div className="w-full h-full lg:h-auto bg-card flex justify-center items-end rounded-2xl">
-              <img src="/features-1.svg" className="w-80 pt-10 lg:w-90" alt="Dashboard showing sales, expenses, and inventory in one view" />
+              <Image src="/features-1.svg" width={320} height={240} className="w-80 pt-10 lg:w-90" style={{ height: 'auto' }} alt="Dashboard showing sales, expenses, and inventory in one view" />
             </div>
           </div>
 
           <div className="flex flex-col lg:flex-row lg:space-x-4 lg:space-y-0">
             {/* Left */}
             <div className="w-full bg-card flex justify-center items-center rounded-2xl order-2 lg:order-1">
-              <img src="/features-2.svg" className="w-80 pt-5" alt="Financial report delivery interface" />
+              <Image src="/features-2.svg" width={320} height={240} className="w-80 pt-5" style={{ height: 'auto' }} alt="Financial report delivery interface" />
             </div>
             {/* Right */}
             <div className="flex flex-col w-full space-y-6 order-1 pb-8 lg:pb-0">
@@ -315,7 +315,7 @@ export default function Home() {
             </div>
             {/* Right */}
             <div className="relative lg:w-[50%] bg-card flex justify-center items-end rounded-2xl">
-              <img src="/what-we-are.svg" className="w-80 -bottom-5" alt="Team working on financial management" />
+              <Image src="/what-we-are.svg" width={320} height={240} className="w-80 -bottom-5" style={{ height: 'auto' }} alt="Team working on financial management" />
             </div>
           </div>
 
@@ -374,7 +374,7 @@ export default function Home() {
               <span className="text-[3rem] font-medium leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem]">Why</span>
               <span className="flex flex-col items-center">
                 <span className="text-[3rem] font-medium leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] text-green-accent">Finx?</span>
-                <img src="/highlight-bar.svg" className="w-28 lg:w-32" alt="" />
+                <Image src="/highlight-bar.svg" width={128} height={12} className="w-28 lg:w-32" style={{ height: 'auto' }} alt="" />
               </span>
             </h2>
             <p className="text-[2.6rem] leading-[3.8rem] md:text-[3rem] md:leading-[4rem] lg:text-[4rem] lg:leading-[4.5rem] font-medium">Because Precision Matters.</p>
@@ -395,7 +395,7 @@ export default function Home() {
               </div>
               <div className="relative w-72 flex justify-center items-center">
                 <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
-                  <img src="/accuracy.svg" className="w-14 ml-3" alt="" />
+                  <Image src="/accuracy.svg" width={56} height={56} className="w-14 ml-3" alt="" />
                 </div>
                 <div className="flex items-center text-left">
                   <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
@@ -404,7 +404,7 @@ export default function Home() {
               </div>
               <div className="relative w-72 flex justify-center items-center">
                 <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
-                  <img src="/control.svg" className="w-14 ml-3" alt="" />
+                  <Image src="/control.svg" width={56} height={56} className="w-14 ml-3" alt="" />
                 </div>
                 <div className="flex items-center text-left w-[6rem]">
                   <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
@@ -449,7 +449,7 @@ export default function Home() {
                 <div className="flex flex-col justify-between space-y-4">
                   <div className="relative flex justify-start items-center">
                     <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card shrink-0">
-                      <img src="/control.svg" className="w-10" alt="" />
+                      <Image src="/control.svg" width={40} height={40} className="w-10" alt="" />
                     </div>
                     <div className="flex items-center text-left">
                       <div className="w-16 h-32 absolute left-[3.8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
@@ -478,7 +478,7 @@ export default function Home() {
                   </div>
                   <div className="relative flex justify-between items-center">
                     <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card shrink-0">
-                      <img src="/accuracy.svg" className="w-10" alt="" />
+                      <Image src="/accuracy.svg" width={40} height={40} className="w-10" alt="" />
                     </div>
                     <div className="flex items-center text-left">
                       <div className="w-16 h-32 absolute left-[3.8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
@@ -528,16 +528,16 @@ export default function Home() {
           <div className="flex items-start">
             <div className="flex space-x-4 items-center justify-center">
               <a href="https://wa.me/+919497436877" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-                <img src="/whatsapp.svg" className="w-10" alt="WhatsApp" />
+                <Image src="/whatsapp.svg" width={40} height={40} className="w-10" alt="WhatsApp" />
               </a>
               <a href="https://www.facebook.com/share/12MTGYfVKXv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
-                <img src="/bxl-facebook.svg" className="w-6" alt="Facebook" />
+                <Image src="/bxl-facebook.svg" width={24} height={24} className="w-6" alt="Facebook" />
               </a>
               <a href="https://www.instagram.com/fin.x.official?igsh=MWlqM2V3a3VxM2diZw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
-                <img src="/instagram-logo.svg" className="w-10" alt="Instagram" />
+                <Image src="/instagram-logo.svg" width={40} height={40} className="w-10" alt="Instagram" />
               </a>
               <a href="https://www.linkedin.com/company/finxofficial/" target="_blank" rel="noopener noreferrer" aria-label="Connect with us on LinkedIn">
-                <img src="/linkedin.svg" className="w-12" alt="LinkedIn" />
+                <Image src="/linkedin.svg" width={48} height={48} className="w-12" alt="LinkedIn" />
               </a>
             </div>
           </div>
