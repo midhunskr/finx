@@ -3,7 +3,9 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)',
+        // Exclude static assets — applying security headers to .svg/.png etc.
+        // causes download managers to intercept them as forced downloads.
+        source: '/((?!.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|js|css|woff2?|ttf|eot|map)$).*)',
         headers: [
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
