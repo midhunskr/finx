@@ -14,7 +14,7 @@ export default function Home() {
         <div className="absolute w-60 h-60 bottom-2 rounded-full bg-lime blur-[6rem] mix-blend-overlay" />
         <div className="absolute w-60 h-60 right-[5rem] top-[9rem] md:right-[10rem] lg:right-[20rem] xxl:right-[30rem] xxxl:right-[40rem] rounded-full bg-lime blur-[6rem] mix-blend-overlay" />
 
-        <div className="relative min-h-screen md:h-screen px-5 py-5 md:px-12 md:py-5 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10 z-10 flex flex-col justify-between">
+        <div className="relative min-h-screen md:h-screen px-5 py-5 md:px-12 md:py-5 lg:px-20 lg:py-5 xxl:px-64 xl:px-40 xl:py-10 xxxl:px-80 xxxl:py-10 z-10 flex flex-col gap-10 md:gap-0 md:justify-between">
 
           {/* Logo bar */}
           <div className="flex justify-between items-center h-[3.5rem] rounded-full">
@@ -38,7 +38,7 @@ export default function Home() {
                 href="#contact"
                 className="w-40 h-10 md:w-44 md:h-14 xxxl:w-52 space-x-4 flex items-center justify-center bg-green-accent rounded-full px-4 md:py-1 xxxl:px-4 xxxl:py-3"
               >
-                <span className="md:text-lg xxxl:text-2xl">Get in touch</span>
+                <span className="whitespace-nowrap md:text-lg xxxl:text-2xl">Get in touch</span>
                 <Image src="/arrow-right.svg" width={20} height={20} className="lg:w-5" alt="" />
               </a>
             </div>
@@ -388,7 +388,7 @@ export default function Home() {
                 <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
                   <Image src="/update.png" width={56} height={56} className="w-14 ml-3" alt="" />
                 </div>
-                <div className="flex items-center text-left w-36">
+                <div className="flex items-center text-left ml-4 w-44">
                   <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
                   <p className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Regularly Updating Records</p>
                 </div>
@@ -397,7 +397,7 @@ export default function Home() {
                 <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
                   <Image src="/accuracy.svg" width={56} height={56} className="w-14 ml-3" alt="" />
                 </div>
-                <div className="flex items-center text-left w-36">
+                <div className="flex items-center text-left ml-4 w-44">
                   <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
                   <p className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Ensuring Accuracy</p>
                 </div>
@@ -406,7 +406,7 @@ export default function Home() {
                 <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
                   <Image src="/control.svg" width={56} height={56} className="w-14 ml-3" alt="" />
                 </div>
-                <div className="flex items-center text-left w-36">
+                <div className="flex items-center text-left ml-4 w-44">
                   <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
                   <p className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Implementing Controls</p>
                 </div>
@@ -418,16 +418,16 @@ export default function Home() {
                 <div className="relative w-24 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
                   <Image src="/audit.png" width={64} height={64} className="w-16 ml-2" alt="" />
                 </div>
-                <div className="flex items-center text-left w-36">
+                <div className="flex items-center text-left ml-4 w-44">
                   <div className="w-16 h-32 absolute left-[7rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
                   <p className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Conducting Audits &amp; Reviews</p>
                 </div>
               </div>
               <div className="relative w-[26rem] flex justify-center items-center">
-                <div className="relative w-22 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
+                <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
                   <Image src="/test-passed.png" width={56} height={56} className="w-14 ml-3" alt="" />
                 </div>
-                <div className="flex items-center text-left w-36">
+                <div className="flex items-center text-left ml-4 w-44">
                   <div className="w-16 h-32 absolute left-[7rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
                   <p className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Staying Up-to-Date with Standards &amp; Regulations</p>
                 </div>
