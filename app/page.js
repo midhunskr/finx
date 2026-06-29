@@ -36,7 +36,7 @@ export default function Home() {
               </div>
               <a
                 href="#contact"
-                className="w-40 h-10 md:w-44 md:h-14 xxxl:w-52 space-x-4 flex items-center justify-center bg-green-accent rounded-full px-4 md:py-1 xxxl:px-4 xxxl:py-3"
+                className="w-40 h-10 md:w-44 md:h-14 xxxl:w-52 space-x-4 px-4 md:py-1 xxxl:px-4 xxxl:py-3 flex items-center justify-center bg-green-accent rounded-full"
               >
                 <span className="whitespace-nowrap md:text-lg xxxl:text-2xl">Get in touch</span>
                 <Image src="/arrow-right.svg" width={20} height={20} className="lg:w-5" alt="" />
@@ -146,10 +146,10 @@ export default function Home() {
                 priority
               />
             </div>
-            <Image src="/card1.png" width={288} height={200} className="absolute z-0 w-40 left-0 bottom-60 sm:bottom-64 md:bottom-[20rem] md:w-52 md:left-28 lg:w-72 lg:left-[7rem] lg:bottom-[28rem] opacity-40" style={{ height: 'auto' }} alt="" />
+            {/* <Image src="/card1.png" width={288} height={200} className="absolute z-0 w-40 left-0 bottom-60 sm:bottom-64 md:bottom-[20rem] md:w-52 md:left-28 lg:w-72 lg:left-[7rem] lg:bottom-[28rem] opacity-40" style={{ height: 'auto' }} alt="" />
             <Image src="/card2.png" width={288} height={200} className="absolute z-0 w-32 left-14 bottom-60 sm:left-[8rem] sm:bottom-[17rem] md:bottom-[20rem] md:w-52 md:left-[15rem] lg:left-[20rem] lg:bottom-[31rem]" style={{ height: 'auto' }} alt="" />
             <Image src="/card4.png" width={288} height={200} className="absolute z-0 w-32 left-64 bottom-[14.5rem] sm:left-[18.5rem] sm:bottom-[16rem] md:bottom-[19rem] md:w-52 md:left-[28rem] lg:w-72 lg:left-[40rem] lg:bottom-[29rem] opacity-40" style={{ height: 'auto' }} alt="" />
-            <Image src="/card5.png" width={288} height={200} className="absolute z-0 w-24 left-[11rem] bottom-[15.5rem] sm:w-28 sm:left-[12rem] sm:bottom-[17rem] md:bottom-[19rem] md:w-52 md:left-[22rem] lg:w-72 lg:left-[30rem] lg:bottom-[28rem]" style={{ height: 'auto' }} alt="" />
+            <Image src="/card5.png" width={288} height={200} className="absolute z-0 w-24 left-[11rem] bottom-[15.5rem] sm:w-28 sm:left-[12rem] sm:bottom-[17rem] md:bottom-[19rem] md:w-52 md:left-[22rem] lg:w-72 lg:left-[30rem] lg:bottom-[28rem]" style={{ height: 'auto' }} alt="" /> */}
           </div>
         </div>
       </div>
@@ -168,7 +168,7 @@ export default function Home() {
 
           <div className="flex flex-col space-y-2 lg:space-y-0 lg:flex-row justify-between lg:space-x-2 bg-card p-2 rounded-3xl w-full">
             {/* Book-Keeping */}
-            <div className="flex flex-col md:flex-row justify-between px-6 space-x-2 lg:space-x-0 lg:flex-col items-center bg-light rounded-2xl xxl:p-2 xxxl:p-4 w-full py-8">
+            <div className="flex flex-col md:flex-row justify-between px-6 space-x-2 lg:space-x-0 lg:flex-col items-center bg-light rounded-2xl xxl:p-6 xxxl:p-4 w-full py-8">
               <Image src="/book-keeping.svg" width={256} height={256} className="md:order-2 lg:order-1 xl:w-[8rem] xxl:w-[12rem] xxxl:w-[16rem] py-2" style={{ height: 'auto' }} alt="" />
               <div className="flex flex-col h-full space-y-2 text-left py-2 lg:order-2">
                 <h3 className="text-center font-bold md:text-lg xxxl:text-2xl">Book-Keeping</h3>
@@ -194,7 +194,7 @@ export default function Home() {
             </div>
 
             {/* Accounting */}
-            <div className="flex flex-col md:flex-row justify-between px-6 space-x-2 lg:space-x-0 lg:flex-col items-center bg-light rounded-2xl xxl:p-2 xxxl:p-4 w-full py-8">
+            <div className="flex flex-col md:flex-row justify-between px-6 space-x-2 lg:space-x-0 lg:flex-col items-center bg-light rounded-2xl xxl:p-6 xxxl:p-4 w-full py-8">
               <Image src="/accounting.svg" width={256} height={256} className="xl:w-[10.5rem] xxl:w-[15.5rem] xxxl:w-[20.5rem] py-2" style={{ height: 'auto' }} alt="" />
               <div className="flex flex-col h-full space-y-2 text-left py-2">
                 <h3 className="text-center font-bold md:text-lg xxxl:text-2xl">Accounting</h3>
@@ -382,107 +382,115 @@ export default function Home() {
           </div>
 
           {/* Value cards — desktop (md+) */}
-          <div className="flex flex-col md:space-y-16 w-full">
+          <div className="flex flex-col md:space-y-16 md:scale-75 lg:scale-100 w-full">
             <div className="hidden md:flex justify-between xxxl:px-[1.5rem]">
+              {/* Card 1 */}
               <div className="relative w-72 flex justify-center items-center">
                 <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
-                  <Image src="/update.png" width={56} height={56} className="w-14 ml-3" alt="" />
+                  <img src="./update.png" alt="update" className="w-14 ml-3" />
                 </div>
-                <div className="flex items-center text-left ml-4 w-44">
-                  <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
-                  <p className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Regularly Updating Records</p>
+                <div className="flex items-center text-left">
+                  <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <h4 className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Regularly <br /> Updating <br /> Records</h4>
                 </div>
               </div>
+              {/* Card 2 */}
               <div className="relative w-72 flex justify-center items-center">
                 <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
-                  <Image src="/accuracy.svg" width={56} height={56} className="w-14 ml-3" alt="" />
+                  <img src="./accuracy.svg" alt="update" className="w-14 ml-3" />
                 </div>
-                <div className="flex items-center text-left ml-4 w-44">
-                  <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
-                  <p className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Ensuring Accuracy</p>
+                <div className="flex items-center text-left">
+                  <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <h4 className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Ensuring <br /> Accuracy </h4>
                 </div>
               </div>
+              {/* Card 3 */}
               <div className="relative w-72 flex justify-center items-center">
                 <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
-                  <Image src="/control.svg" width={56} height={56} className="w-14 ml-3" alt="" />
+                  <img src="./control.svg" alt="update" className="w-14 ml-3" />
                 </div>
-                <div className="flex items-center text-left ml-4 w-44">
-                  <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
-                  <p className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Implementing Controls</p>
+                <div className="flex items-center text-left w-[6rem]">
+                  <div className="w-16 h-32 absolute left-[6rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <h4 className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Implementing <br /> Controls</h4>
                 </div>
               </div>
             </div>
-
-            <div className="hidden md:flex justify-between w-full lg:px-[4rem] xxl:px-[6rem]">
+            <div className="hidden md:flex justify-between w-full lg:px-[4rem] xxl:px-[12rem]">
+              {/* Card 4 */}
               <div className="relative w-72 flex justify-center items-center">
                 <div className="relative w-24 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
-                  <Image src="/audit.png" width={64} height={64} className="w-16 ml-2" alt="" />
+                  <img src="./audit.png" alt="update" className="w-16 ml-2" />
                 </div>
-                <div className="flex items-center text-left ml-4 w-44">
-                  <div className="w-16 h-32 absolute left-[7rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
-                  <p className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Conducting Audits &amp; Reviews</p>
+                <div className="flex items-center text-left">
+                  <div className="w-16 h-32 absolute left-[7rem] lg:left-[6rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <h4 className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Conducting <br /> Audits & <br /> Reviews</h4>
                 </div>
               </div>
-              <div className="relative w-[26rem] flex justify-center items-center">
-                <div className="relative w-28 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
-                  <Image src="/test-passed.png" width={56} height={56} className="w-14 ml-3" alt="" />
+              {/* Card 5 */}
+              <div className="relative w-[26rem] flex justify-center items-center ">
+                <div className="relative w-22 h-28 flex justify-between items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
+                  <img src="./test-passed.png" alt="update" className="w-14 ml-3" />
                 </div>
-                <div className="flex items-center text-left ml-4 w-44">
-                  <div className="w-16 h-32 absolute left-[7rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
-                  <p className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Staying Up-to-Date with Standards &amp; Regulations</p>
+                <div className="flex items-center text-left w-[14rem]">
+                  <div className="w-16 h-32 absolute left-[7rem] lg:left-[6rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <h4 className="z-10 text-grey-shade-2 text-xl font-medium leading-8">Staying Up-to-Date <br /> with Standards & <br /> Regulations</h4>
                 </div>
               </div>
             </div>
-
-            {/* Value cards — mobile */}
+            {/* Highlight Card - mobile section*/}
             <div className="md:hidden w-full space-y-8">
-              <div className="flex">
-                <div className="w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card shrink-0">
-                  <Image src="/test-passed.png" width={40} height={40} className="w-10" alt="" />
+              {/* Card 1 */}
+              <div className=" flex ">
+                <div className=" w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
+                  <img src="./test-passed.png" alt="update" className="w-10 " />
                 </div>
                 <div className="relative flex items-center text-left">
-                  <div className="w-16 h-32 absolute -left-[1.2rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
-                  <p className="z-10 text-grey-shade-2 text-base font-medium">Staying Up-to-Date with Standards &amp; Regulations</p>
+                  <div className="w-16 h-32 absolute -left-[1.2rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                  <h4 className="z-10 text-grey-shade-2 text-base font-medium">Staying Up-to-Date <br /> with Standards & <br /> Regulations</h4>
                 </div>
               </div>
               <div className="flex justify-between">
                 <div className="flex flex-col justify-between space-y-4">
+                  {/* Card 2 */}
                   <div className="relative flex justify-start items-center">
-                    <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card shrink-0">
-                      <Image src="/control.svg" width={40} height={40} className="w-10" alt="" />
+                    <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
+                      <img src="./control.svg" alt="update" className="w-10 " />
                     </div>
                     <div className="flex items-center text-left">
-                      <div className="w-16 h-32 absolute left-[3.8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
-                      <p className="z-10 text-grey-shade-2 text-base font-medium">Implementing Controls</p>
+                      <div className="w-16 h-32 absolute left-[3.8rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                      <h4 className="z-10 text-grey-shade-2 text-base font-medium">Implementing <br /> Controls</h4>
                     </div>
                   </div>
+                  {/* Card 3 */}
                   <div className="relative flex justify-start items-center">
-                    <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card shrink-0">
-                      <Image src="/audit.png" width={40} height={40} className="w-10" alt="" />
+                    <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
+                      <img src="./audit.png" alt="update" className="w-10 " />
                     </div>
                     <div className="flex items-center text-left">
-                      <div className="w-16 h-32 absolute left-[3.8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
-                      <p className="z-10 text-grey-shade-2 text-base font-medium">Conducting Audits &amp; Reviews</p>
+                      <div className="w-16 h-32 absolute left-[3.8rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                      <h4 className="z-10 text-grey-shade-2 text-base font-medium">Conducting <br /> Audits & <br /> Reviews</h4>
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-col items-end w-full space-y-4">
+                  {/* Card 4 */}
                   <div className="relative flex justify-between items-center">
-                    <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card shrink-0">
-                      <Image src="/update.png" width={40} height={40} className="w-10" alt="" />
+                    <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
+                      <img src="./update.png" alt="update" className="w-10 " />
                     </div>
                     <div className="flex items-center text-left">
-                      <div className="w-16 h-32 absolute left-[3.8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
-                      <p className="z-10 text-grey-shade-2 text-base font-medium">Regularly Updating Records</p>
+                      <div className="w-16 h-32 absolute left-[3.8rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                      <h4 className="z-10 text-grey-shade-2 text-base font-medium">Regularly <br /> Updating <br /> Records</h4>
                     </div>
                   </div>
+                  {/* Card 5 */}
                   <div className="relative flex justify-between items-center">
-                    <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card shrink-0">
-                      <Image src="/accuracy.svg" width={40} height={40} className="w-10" alt="" />
+                    <div className="relative w-[5rem] h-[6rem] flex justify-center items-center p-2 bg-light rounded-2xl border-[.4rem] border-card">
+                      <img src="./accuracy.svg" alt="update" className="w-10 " />
                     </div>
                     <div className="flex items-center text-left">
-                      <div className="w-16 h-32 absolute left-[3.8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" aria-hidden="true" />
-                      <p className="z-10 text-grey-shade-2 text-base font-medium">Ensuring Accuracy</p>
+                      <div className="w-16 h-32 absolute left-[3.8rem] lg:left-[8rem] bg-light shadow-[-32.350955963134766px_0px_26.959131240844727px_-26.959131240844727px_rgba(0,0,0,0.50)]" />
+                      <h4 className="z-10 text-grey-shade-2 text-base font-medium">Ensuring <br /> Accuracy</h4>
                     </div>
                   </div>
                 </div>
